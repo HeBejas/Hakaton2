@@ -52,6 +52,21 @@ nav a {
     background: var(--color-yellow);
     color: var(--color-black);
 }
+.drop_container {
+    display: flex;
+    flex-direction: column;
+}
+.drop_btn {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;  
+}
+.drop {
+    display: none;
+    flex-direction: column;
+
+}
 nav div {
     display: flex;
 }
