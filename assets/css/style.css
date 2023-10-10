@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --color-green: #00a32c;
+    --color-yellow: #f0b72a;
+    --color-black: #1b1a18;
+    --color-gray: #ebebeb;
+}
+
+*, *::before, *::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+header, footer {
+    width: 100%;
+}
+.container {
+    width: 1170px;
+    margin: 0px auto;
+}
+/* HEADER */
+header {
+    position: relative;
+    background: var(--color-green);
+    border-bottom: 2px solid #fff;
+    height: 120px;
+    z-index: 999;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+nav a {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;  
+    margin: 0px 10px;
+    padding: 10px;
+    border-radius: 15px;
+    transition: all .3s;
+}
+.active_header_btn, nav a:hover, footer a:hover {
+    background: var(--color-yellow);
+    color: var(--color-black);
+}
+nav div {
+    display: flex;
+}
+.header_logo {
+    position: absolute;
+    transform: translate(-50%, 25%);
+    left: 50%;
+}
+/* FOOTER */
+footer {
+    background: var(--color-black);
+}
+.footer_logo {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+footer a {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    transition: all .3s;
+}
+footer li {
+    margin: 25px 0px;
+    padding-left: 10px;
+    list-style-type: none;
+}
+footer li::before {
+    color: #fff;
+    content: "▪";
+    padding-right: 10px;
+}
+.footer_left {
+    display: flex;
+}
+.footer_right p {
+    margin: 25px 0px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}

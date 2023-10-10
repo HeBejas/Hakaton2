@@ -1,0 +1,21 @@
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 120px);
+    background: url(../images/welcome.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: saturate(200%);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    text-align: center;
+    color: #fff;
+    text-shadow: 5px 0px 5px var(--color-black);
+}
+.welcome span {
+    font-size: 160px;
+}
