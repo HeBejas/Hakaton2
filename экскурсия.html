@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Мероприятия</title>
+<link rel="stylesheet" href="style.css">
+<!-- Свой стиль -->
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page_content">
+	<h2>Экскурсии</h2>
+	<div class="information_block">В деревне Мувыр можно наслаждаться природой, прогуляться по лесу до висячего моста, прокатиться на лодке, рыбачить, организовать барбекю, устроить пикник в беседке или под открытым небом и многое другое.</div>
+	<div class="tour_wrapper"> 
+	<div class="tour_catalog">
+		<div class="tour_position">
+			<img src="event1.PNG">
+			<div class="tour_position_desc">
+				<div class="tour_name">Название</div>
+				<div class="tour_desc">Описание</div>
+				<div class="tour_desc">500 руб</div>
+			</div>
+		</div>
+
+		<div class="tour_position">
+			<img src="event1.PNG">
+			<div class="tour_position_desc">
+				<div class="tour_name">Название</div>
+				<div class="tour_desc">Описание</div>
+				<div class="tour_desc">500 руб</div>
+			</div>
+		</div>
+
+		<div class="tour_position">
+			<img src="event1.PNG">
+			<div class="tour_position_desc">
+				<div class="tour_name">Название</div>
+				<div class="tour_desc">Описание</div>
+				<div class="tour_desc">500 руб</div>
+			</div>
+		</div>
+
+		<div class="tour_position">
+			<img src="event1.PNG">
+			<div class="tour_position_desc">
+				<div class="tour_name">Название</div>
+				<div class="tour_desc">Описание</div>
+				<div class="tour_desc">500 руб</div>
+			</div>
+		</div>
+
+		<div class="tour_position">
+			<img src="event1.PNG">
+			<div class="tour_position_desc">
+				<div class="tour_name">Название</div>
+				<div class="tour_desc">Описание</div>
+				<div class="tour_desc">500 руб</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+</body>
+
+<style>
+.tour_position img{
+	width: 400px;
+}
+.tour_catalog{
+	display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 1020px;
+}
+.tour_name{
+	text-align: inherit;
+	font-weight: 700;
+	font-size: 24px;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+.tour_desc{
+	margin-left: 20px;
+    margin-bottom: 10px;
+	
+}
+.tour_position img{
+	border-radius: 20px;
+}
+.tour_position{
+	position: relative;
+	/* padding: 30px; */
+	margin: 10px;
+	/* border-radius: 30px; */
+}
+.tour_position_desc{
+	width: 400px;
+	background-color: #0a0a0ac4;
+	bottom: 4px;
+    position: absolute;
+	min-height: 65px;
+	color: rgb(255, 255, 255);
+	border-radius: 0px 0px 20px 20px;
+}
+
+.page_content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; 	
+}
+.information_block{
+	width: 1000px;
+    text-align: center;
+}
+
+</style>
+
+</html>
+
