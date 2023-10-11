@@ -3,11 +3,13 @@
         <nav>
             <div>
                 <div class="drop_container">
-                    <div class="drop_btn hover"><img src="assets/images/drop.svg" alt="Список">Услуги</div>
-                    <div class="drop" style="display: none;">
+                    <div class="drop_btn hover"><img src="assets/images/drop.svg" alt="Список" style="margin-right: 20px">Услуги</div>
+                    <div class="drop">
+                        <a href="" class="hover">Экскурсии</a>
                         <a href="" class="hover">Мероприятия</a>
                         <a href="" class="hover">Гостевые домики</a>
                         <a href="" class="hover">Развлечения</a>
+                        <a href="" class="hover">Молочная продукция</a>
                         <a href="#" class="hover">История</a>
                     </div>
                 </div>
@@ -33,13 +35,19 @@
         if(i) {
             $(this).removeClass("drop_btn_active");
             $(".drop_btn img").attr("src", "assets/images/drop.svg");
-            $(".drop").toggle("show");
+            $(".drop").css({
+                "max-height": "0px",
+                "padding-top": "0px",
+            });
             i = false;
         }
         else {
             $(this).addClass("drop_btn_active");
             $(".drop_btn img").attr("src", "assets/images/undrop.svg");
-            $(".drop").toggle("show");
+            $(".drop").css({
+                "max-height": "600px",
+                "padding-top": "40px",
+            });
             i = true;
         }
         

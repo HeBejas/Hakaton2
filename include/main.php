@@ -30,6 +30,9 @@
                 <div id="tour_next_arrow" class="arrow">></div>
             </div>
         </div>
+        <div style="float: right; margin-top: 15px">
+            <a href="" class="page_link">Все Развлечения</a>
+        </div>
     </div>
     <div class="container margin_top">
         <div>
@@ -64,22 +67,132 @@
             </div>
             <div id="event_next_arrow" class="arrow">></div>
         </div>
+        <div style="float: right; margin-top: 15px">
+            <a href="" class="page_link">Все Меприятия</a>
+        </div>
+    </div>
+    <div class="container margin_top">
+        <div class="flex_space_between">
+            <div>
+                <div class="header">Оргнизация Свадеб</div>
+                <div class="text">Мы предлагаем уникальную возможность создать незабываемое свадебное торжество в живописной деревне Мувыр. Наша команда профессионалов занимается всеми аспектами организации свадебного мероприятия, начиная от выбора идеального места для проведения церемонии и банкета до оформления и развлекательной программы</div>
+                <div style="margin-top: 20px">
+                    <a href="" class="page_link">Все Мероприятия</a>
+                </div>
+            </div>
+            <img src="assets/images/marry.jpg" alt="Свадьбы" class="marry_img">
+        </div>
+    </div>
+    <div class="container margin_top">
+        <div class="header">Развлечения</div>
+        <div class="text">Мы предлагаем большой спектр развлечений</div>
+        <div class="flex_space_between" style="margin-top: 20px;">
+            <div class="fun_main_img_container">
+                <img src="assets/images/fun1.jpg" alt="Развлечение" class="fun_main_img">
+            </div>
+            <div class="fun_images">
+                <div class="fun_img_container">
+                    <img src="assets/images/fun2.jpg" alt="Развлечение" class="fun_img">
+                </div>
+                <div class="fun_img_container">
+                    <img src="assets/images/fun3.jpg" alt="Развлечение" class="fun_img">
+                </div>
+            </div>
+        </div>
+        <div style="float: right; margin-top: 15px">
+            <a href="" class="page_link">Развлечения</a>
+        </div>
+    </div>
+    <div class="container margin_top">
+        <div class="header">Гостевые Домики</div>
+        <div class="text">
+            <p>Мы предлагаем вам остановиться в наших</p>
+            <p>уютных гостевых домиках</p>
+        </div>
+        <div class="houses">
+            <div class="house">
+                <img src="assets/images/house1.jpg" alt="Домик 1">
+                <div class="house_title">Домик 1</div>
+                <div class="house_desc">4 чел., 3300 р.</div>
+            </div>
+            <div class="house">
+                <img src="assets/images/house2.jpg" alt="Домик 1">
+                <div class="house_title">Домик 2</div>
+                <div class="house_desc">4 чел., 3300 р.</div>
+            </div>
+            <div class="house">
+                <img src="assets/images/house3.jpg" alt="Домик 1">
+                <div class="house_title">Домик 3</div>
+                <div class="house_desc">4 чел., 3300 р.</div>
+            </div>
+        </div>
+        <div style="float: right; margin-top: 15px">
+            <a href="" class="page_link">Подробнее</a>
+        </div>
+    </div>
+    <div class="container margin_top">
+        <div class="flex_space_between">
+            <div class="milk_text">
+                <div class="header">Молочная Продукция</div>
+                <div class="text">Молочная продукция, производящаяся в деревне Мувыр представляет широкий ассортимент свежих и натуральных молочных продуктов, созданных с любовью и заботой в нашей деревне. Мы гордимся высоким качеством нашей продукции, которая производится из свежего молока, полученного от местных коров. Наша команда экспертов следит за каждым этапом производства, чтобы обеспечить вам самые вкусные и полезные молочные продукты. От свежего молока до йогуртов, сыров и масла - мы предлагаем вам насладиться натуральными и питательными продуктами от нашей деревни Мувыр.</div>
+                <div style="float: left; margin-top: 30px">
+                    <a href="" class="page_link">Наша молочая продукция</a>
+                </div>
+            </div>
+            <div class="milk_img_container">
+                <img src="assets/images/milk.jpg" alt="Молочная продукция" class="milk_img">
+            </div>
+        </div>
+    </div>
+    <div class="container margin_top">
+        <div class="goals_title">Наши Цели</div>
+        <div class="goals">
+            <div class="goal">
+                <div class="goal_img_container">
+                    <img src="assets/images/hes.jpg" alt="Фото проекта">
+                </div>
+                <div class="goal_text">
+                    <div class="goal_header">Восстановить ГЭС</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
+                </div>
+            </div>
+            <div class="goal">
+                <div class="goal_img_container">
+                    <img src="assets/images/hes.jpg" alt="Фото проекта">
+                </div>
+                <div class="goal_text">
+                    <div class="goal_header">Восстановить ГЭС</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
+                </div>
+            </div>
+            <div class="goal">
+                <div class="goal_img_container">
+                    <img src="assets/images/hes.jpg" alt="Фото проекта">
+                </div>
+                <div class="goal_text">
+                    <div class="goal_header">Восстановить ГЭС</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
+                </div>
+            </div>
+        </div>
+        <div class="investors">Инвестируя в возрожденную деревню Мувыр, вы не только получите выгоду и прибыль, но и внесете значимый вклад в развитие этого прекрасного места. Мы гарантируем прозрачность, надежность и сотрудничество на взаимовыгодных условиях. </div>
     </div>
 </main>
 <script>
     $(document).ready(function() {
         $("#tour_slider").slick({
+            infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             prevArrow: "#tour_prev_arrow",
             nextArrow: "#tour_next_arrow",
         });
         $("#event_slider").slick({
+            infinite: false,
             slidesToShow: 3,
             slidesToScroll: 3,
             prevArrow: "#event_prev_arrow",
             nextArrow: "#event_next_arrow",
         });
-    })
-    
+    });
 </script>
