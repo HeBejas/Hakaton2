@@ -2,12 +2,13 @@
     <div class="container">
         <div class="footer_left">
             <ul>
-                <li><a href="" class="hover">Развлечения</a></li>
-                <li><a href="" class="hover">Гостевые домики</a></li>
+                <li><a href="" class="hover">Экскурсии</a></li>
                 <li><a href="" class="hover">Мероприятия</a></li>
+                <li><a href="" class="hover">Гостевые домики</a></li>
             </ul>
             <ul>
-                <li><a href="" class="hover">Карта</a></li>
+                <li><a href="" class="hover">Развлечения</a></li>
+                <li><a href="" class="hover">Продукция</a></li>
                 <li><a href="" class="hover">История</a></li>
             </ul>
         </div>
@@ -20,7 +21,7 @@
             </div>
         </div>
         <div class="footer_right">
-            <p><a href="#tel" class="hover">+7 (901) 865 87-55</a></p>
+            <p><a href="contacts.php" class="hover">Контакты</a><a href="#tel" class="hover">+7 (901) 865 87-55</a></p>
             <p>Сделано командой</p>
             <p>"Будущее России"</p>
         </div>

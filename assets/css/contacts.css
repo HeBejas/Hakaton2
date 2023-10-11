@@ -1,0 +1,26 @@
+#rec590986084 .tn-elem[data-elem-id="1684089518676"] .tn-atom{
+	height: 700px !important;
+}
+.tn-atom .tn-atom__html{
+	height: 400px !important;
+	width: 500px;
+}
+
+.t396__filter{
+	height: 0px !important;
+}
+.t396__carrier{
+	height: 0px !important;
+}
+.page_content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; 	
+}
+.information_block{
+	width: 1000px;
+}
+.information_block span {
+    font-weight: 600;
+}

@@ -1,0 +1,137 @@
+.mt {
+    margin-top: 80px;
+}
+.houses_catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.h_house {
+    width: 47%;
+    margin-bottom: 80px;
+}
+.h_house_img_container {
+    width: 100%;
+    height: 400px;
+}
+.h_house_img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+.h_title {
+    font-size: 22px;
+    font-weight: 700;
+}
+.h_price_number {
+    font-weight: 500;
+}
+.header {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.h_btn {
+    float: right;
+    padding: 10px;
+    background: var(--color-green);
+    border-radius: 15px;
+    color: #fff;
+    font-weight: 600;
+    transition: all .3s;
+    cursor: pointer;
+}
+.h_btn:hover {
+    background: var(--color-yellow);
+    color: var(--color-black);
+}
+.modal_bachdrop {
+    opacity: 0;
+    z-index: -1;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    inset: 0;
+    transition: all .3s;
+}
+.modal {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+}
+.modal_close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.modal_close:hover {
+    color: red;
+}
+.house_slider_box {
+    width: 700px;
+}
+.house_slider_track_box {
+    width: 100%;
+}
+.house_img_box1 {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-block: 10px;
+}
+.house_img_box2 {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.house_slider_track_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+.page_content {
+    font-size: 20px;
+}
+.tel {
+    font-weight: 600;
+}
+.h_modal_text {
+    width: 500px;
+    padding: 20px;
+}
+.h_modal_text .h_title {
+    margin-bottom: 30px;
+}
+.h_modal_text .h_price_number {
+    margin-bottom: 10px;
+}
+.h_desc {
+    margin-bottom: 30px;
+}
+.input_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+.input_wrapper input {
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--color-black);
+    border-radius: 5px;
+    padding: 5px;
+}

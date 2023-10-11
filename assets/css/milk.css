@@ -1,0 +1,56 @@
+.mt {
+    margin-top: 80px;
+}
+.milk_gallery{
+	display: flex;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 900px;
+}
+.milk_gallery img{
+	width: 400px;
+	border-radius: 20px;
+	margin: 10px;
+}
+.milk_main_img{
+	width: 500px;
+    border-radius: 20px;
+    margin: 10px;
+}
+.milk_prod_cat{
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.milk_prod_pos{
+	margin: 10px;
+	background-color: #EFEFEF;
+	height: 260px;
+	width: 290px;
+
+	border-radius: 40px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.milk_prod_name{
+	margin-top: 15px;
+}
+
+.milk_prod_pos img{
+	width: 270px;
+    height: 180px;
+}
+.page_content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column; 	
+}
+.information_block{
+	width: 1000px;
+    text-align: center;
+}

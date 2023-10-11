@@ -36,7 +36,7 @@
     </div>
     <div class="container margin_top">
         <div>
-            <div class="header">Мепориятия</div>
+            <div class="header">Мероприятия</div>
             <div class="text">Мы предлагаем множество чудесных мероприятий</div>
         </div>
         <div class="event_slider_box">
@@ -68,13 +68,13 @@
             <div id="event_next_arrow" class="arrow">></div>
         </div>
         <div style="float: right; margin-top: 15px">
-            <a href="" class="page_link">Все Меприятия</a>
+            <a href="" class="page_link">Все Мероприятия</a>
         </div>
     </div>
     <div class="container margin_top">
         <div class="flex_space_between">
             <div>
-                <div class="header">Оргнизация Свадеб</div>
+                <div class="header">Организация Свадеб</div>
                 <div class="text">Мы предлагаем уникальную возможность создать незабываемое свадебное торжество в живописной деревне Мувыр. Наша команда профессионалов занимается всеми аспектами организации свадебного мероприятия, начиная от выбора идеального места для проведения церемонии и банкета до оформления и развлекательной программы</div>
                 <div style="margin-top: 20px">
                     <a href="" class="page_link">Все Мероприятия</a>

@@ -23,6 +23,7 @@ header, footer {
 .container {
     width: 1170px;
     margin: 0px auto;
+    font-size: 20px;
 }
 .flex_space_between {
     display: flex;
