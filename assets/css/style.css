@@ -24,6 +24,10 @@ header, footer {
     width: 1170px;
     margin: 0px auto;
 }
+.flex_space_between {
+    display: flex;
+    justify-content: space-between;
+}
 /* HEADER */
 header {
     position: relative;

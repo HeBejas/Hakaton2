@@ -19,10 +19,6 @@
 .welcome span {
     font-size: 160px;
 }
-.flex_space_between {
-    display: flex;
-    justify-content: space-between;
-}
 .header {
     font-family: 'Montserrat Alternates', sans-serif;
     color: #1B1A18;

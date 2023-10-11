@@ -5,18 +5,18 @@
                 <div class="drop_container">
                     <div class="drop_btn hover"><img src="assets/images/drop.svg" alt="Список" style="margin-right: 20px">Услуги</div>
                     <div class="drop">
-                        <a href="" class="hover">Экскурсии</a>
-                        <a href="" class="hover">Мероприятия</a>
-                        <a href="" class="hover">Гостевые домики</a>
-                        <a href="" class="hover">Развлечения</a>
-                        <a href="" class="hover">Молочная продукция</a>
-                        <a href="#" class="hover">История</a>
+                        <a href="tours.php" class="hover" id="tours">Экскурсии</a>
+                        <a href="events.php" class="hover" id="events">Мероприятия</a>
+                        <a href="houses.php" class="hover" id="houses">Гостевые домики</a>
+                        <a href="funs.php" class="hover" id="funs">Развлечения</a>
+                        <a href="milk.php" class="hover" id="milk">Молочная продукция</a>
+                        <a href="history.php" class="hover" id="history">История</a>
                     </div>
                 </div>
-                <a href="#" class="hover">Инвесторам</a>
+                <a href="investors.php" class="hover" id="investors">Инвесторам</a>
             </div>
             <div class="header_logo">
-                <a href=""><img src="assets/images/logo.png" alt="Логотип"></a>
+                <a href="/mvr"><img src="assets/images/logo.png" alt="Логотип"></a>
             </div>
             <div>
                 <div class="icons">
