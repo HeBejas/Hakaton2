@@ -1,0 +1,36 @@
+.about_content_block{
+
+}
+.about_content h2{
+	position: relative;
+    left: -110px;
+}
+.about_content_info{
+    width: 500px;
+    letter-spacing: 2px;
+	line-height: 20px;
+}
+.about_content{
+    display: flex;
+    justify-content: center;
+	flex-direction: column;
+	align-items: center;	
+}
+.about_image{
+    background-size: cover;
+    height: 300px;
+    width: 700px;
+}
+.about_image_side{
+    background-size: cover;
+    height: 300px;
+    width: 400px;
+}
+
+.about_content_img_side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: normal;
+}
