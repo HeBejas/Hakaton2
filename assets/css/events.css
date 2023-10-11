@@ -65,10 +65,6 @@
 	align-items: center;
 	flex-direction: column;
 }
-.information_block{
-	width: 1000px;
-    text-align: center;
-}
 .event_position img{
 	width: 400px;
 }
@@ -105,6 +101,10 @@
     height: 200px;
     overflow: hidden;
     border-radius: 20px;
+    cursor: pointer;
+}
+.marry_img_box2 img:hover {
+    transform: scale(1.1);
 }
 .marry_slider_track_box img {
     width: 100%;
@@ -112,10 +112,17 @@
     object-fit: cover;
     object-position: center;
     border-radius: 20px;
+    transition: all .3s;
 }
 .page_content {
     font-size: 20px;
 }
 .tel {
     font-weight: 600;
+}
+h2 {
+    margin-bottom: 25px;
+}
+.information_block {
+    margin-block: 10px;
 }

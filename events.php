@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>История Мувыра</title>
+    <title>Мероприятия</title>
     <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/events.css">
     <link rel="stylesheet" href="assets/slick/slick.css">
     <link rel="stylesheet" href="assets/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <script src="assets/js/jquery.js"></script>
     <script src="assets/slick/slick.min.js"></script>
 </head>
@@ -19,7 +20,7 @@
             <h2>Мероприятия</h2>
             <div class="information_block">В Мувыре вас ждёт множество увлекательных мероприятий, расчитанных на то, чтобы оставить у вас самые яркие и теплиые воспоминания о нашей деревне</div>
             <div class="events_catalog">
-                <div class="event_position">
+                <div class="event_position wow animate__animated animate__fadeIn">
                     <div class="event_position_time_desc">
                         <div class="event_date">11.10 - 20.10</div>
                         <div class="event_time">С 8.00 До 19.00</div>
@@ -30,7 +31,7 @@
                         <div class="event_desc">В Мувыре празднуется масленицаю. Всех Ждем!</div>
                     </div>
                 </div>
-                <div class="event_position">
+                <div class="event_position wow animate__animated animate__fadeInLeft">
                     <div class="event_position_time_desc">
                         <div class="event_date">11.10 - 20.10</div>
                         <div class="event_time">С 8.00 До 19.00</div>
@@ -41,7 +42,7 @@
                         <div class="event_desc">В Мувыре празднуется масленицаю. Всех Ждем!</div>
                     </div>
                 </div>
-                <div class="event_position">
+                <div class="event_position wow animate__animated animate__fadeInRight">
                     <div class="event_position_time_desc">
                         <div class="event_date">11.10 - 20.10</div>
                         <div class="event_time">С 8.00 До 19.00</div>
@@ -63,7 +64,7 @@
             Банкет
             Домик невесты</div>
 
-            <div class="marry_slider_box">
+            <div class="marry_slider_box wow animate__animated animate__fadeInUp">
                 <div class="marry_slider_track_box">
                     <div class="marry_slider_1">
                         <div>
@@ -153,10 +154,10 @@
                     </div>
                 </div>
             </div>
-
-            Организация свадьбы в Мувыре, выездные регистрации в деревне:
-            Вы можете договорится по телефону <span class="tel">+7 (901) 865 87-55</span>
-
+            <div class="information_block">
+                <p>Организация свадьбы в Мувыре, выездные регистрации в деревне:</p>
+                <p>Вы можете договорится по телефону <span class="tel">+7 (901) 865 87-55</span></p>
+            </div>
         </div>
     </div>
     <?include 'include/footer.php'?>
@@ -176,6 +177,12 @@
             centerMode: true,
             focusOnSelect: true,
         });
+    </script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+    $(document).ready(() => {
+        new WOW().init();
+    })
     </script>
 </body>
 </html>

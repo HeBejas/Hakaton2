@@ -24,7 +24,7 @@
                     <a href="https://vk.com/weekendvmywer"><img src="assets/images/vk.svg" alt="ВК"></a>
                     <a href="https://t.me/discoverUdmurtia"><img src="assets/images/telegram.svg" alt="Телеграм"></a>
                 </div>
-                <a href="#tel" class="hover">+7 (901) 865 87-55</a>
+                <a href="tel:" class="hover">+7 (901) 865 87-55</a>
             </div>
         </nav>
     </div>

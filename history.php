@@ -7,16 +7,17 @@
     <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/history.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <script src="assets/js/jquery.js"></script>
 </head>
 <body>
     <?include 'include/header.php'?>
     <div class="about_content"> 
         <div class="container">
-            <div class="about_image">
+            <div class="about_image wow animate__animated animate__fadeInDown">
                 <img src="assets/images/muvir_story2.PNG.jpg">
             </div>
-            <h2>История мувыра</h2>
+            <h2 style="margin-top: 20px">История мувыра</h2>
             <div class="about_content_block">
                 В начале 1980-х родную деревню Корепанова, основанную в 1837-м, стёрли с лица земли. 
                 Дома снесли бульдозером, людей перебросили в соседние сёла. 
@@ -38,7 +39,7 @@
                 Мне хотелось ему помогать. Я гордился нашей деревней. 
                 И даже представить себе не мог, что когда-нибудь она исчезнет и мне придётся её возрождать.
                 <div class="about_imgs">
-                    <div class="about_content_img_side">
+                    <div class="about_content_img_side wow animate__animated animate__fadeInLeft">
                         <div class="about_image_side_box">
                             <img class="about_image_side" src="assets/images/muvir_story1.PNG">
                         </div>
@@ -46,7 +47,7 @@
                     </div>
                     
                     <div class="about_content_img_side">
-                        <div class="about_image_side_box">
+                        <div class="about_image_side_box wow animate__animated animate__fadeInRight">
                             <img class="about_image_side" src="assets/images/about3.png">
                         </div>
                         <h3>Улица д. Мувыр в 70-е годы.png</h3>
@@ -64,7 +65,7 @@
                 А материалы для постройки домов Александр Геннадьевич предоставляет переселенцам безвозмездно. 
                 Зарплаты в хозяйстве — 25–30 тыс. руб. Вроде немного. Но работники и зерно получают, и дрова для отопления.
                 <div class="flex_space_between">
-                    <div class="about_content_img_side">
+                    <div class="about_content_img_side wow animate__animated animate__zoomIn">
                         <div class="about_image_side_box">
                             <img class="about_image_side" src="assets/images/about4.jpg">
                         </div>
@@ -83,7 +84,7 @@
                 </div>
                 
                 <div class="flex_space_between">
-                    <div class="about_content_img_side">
+                    <div class="about_content_img_side wow animate__animated animate__zoomIn">
                         <div class="about_image_side_box">
                             <img class="about_image_side" src="assets/images/about5.jpg">
                         </div>
@@ -115,9 +116,9 @@
                 И потянулись школьники и взрослые в деревню, в которой есть крутая детская площадка, 
                 верёвочный экстрим-парк, каскад зарыбленных прудов, где можно посидеть не с гаджетом, а с удочкой...
                 <div class="flex_space_between">
-                    <div class="about_content_img_side">
+                    <div class="about_content_img_side wow animate__animated animate__bounceIn">
                         <div class="about_image_side_box">
-                            <img class="about_image_side" src="assets/images/korepanov.PNG">
+                            <img class="about_image_side" src="assets/images/korepanov.PNG" style="object-position: top;">
                         </div>
                         <h3>Александр Корепанов</h3>
                     </div>
@@ -136,8 +137,8 @@
             кто устал от ритма большого города и всегда мечтал иметь дом в настоящей русской деревне.
             </div>
             
-            <div class="about_content_img_side">
-                <div class="about_image_side_box">
+            <div class="about_content_img_side wow animate__animated animate__fadeInUp" style="margin-bottom: 20px;">
+                <div class="about_image_side_box" style="width: 700px;">
                     <img class="about_image_side" src="assets/images/about6.jpg">
                 </div>
             </div>
@@ -146,6 +147,12 @@
     <?include 'include/footer.php'?>
     <script>
         $("#history").addClass("active_header_btn")
+    </script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+    $(document).ready(() => {
+        new WOW().init();
+    })
     </script>
 </body>
 </html>

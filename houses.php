@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>История Мувыра</title>
+    <title>Гостевые Домики</title>
     <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/houses.css">
     <link rel="stylesheet" href="assets/slick/slick.css">
     <link rel="stylesheet" href="assets/slick/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <script src="assets/js/jquery.js"></script>
     <script src="assets/slick/slick.min.js"></script>
 </head>
@@ -17,7 +18,7 @@
     <div class="container mt">
         <div class="header">Гостевые домики</div>
         <div class="houses_catalog">
-            <div class="h_house">
+            <div class="h_house wow animate__animated animate__fadeInUp">
                 <div class="h_house_img_container">
                     <img src="assets/images/house1.jpg" alt="Фото домика" second_image="assets/images/house2.jpg">
                 </div>
@@ -29,7 +30,7 @@
                 </div>
                 <div class="h_btn" id="1">Бронировать</div>
             </div>
-            <div class="h_house">
+            <div class="h_house wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
                 <div class="h_house_img_container">
                     <img src="assets/images/house1.jpg" alt="Фото домика" second_image="assets/images/house2.jpg">
                 </div>
@@ -41,7 +42,7 @@
                 </div>
                 <div class="h_btn" id="1">Бронировать</div>
             </div>
-            <div class="h_house">
+            <div class="h_house wow animate__animated animate__fadeInUp">
                 <div class="h_house_img_container">
                     <img src="assets/images/house1.jpg" alt="Фото домика" second_image="assets/images/house2.jpg">
                 </div>
@@ -159,6 +160,12 @@
                 "z-index": -1,
             });
         });
+    </script>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+    $(document).ready(() => {
+        new WOW().init();
+    })
     </script>
 </body>
 </html>

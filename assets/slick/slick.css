@@ -117,3 +117,8 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
+.slick-disabled {
+    color: var(--color-black);
+    background: var(--color-gray);
+    cursor: default;
+}
