@@ -1,0 +1,49 @@
+.prokat_catalog{
+	width: 1020px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.information_block{
+	width: 1000px;
+    text-align: center;
+}
+.page_content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.prokat_block	{
+	display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    margin: 20px;
+	background-color: #e9e9e9;
+    padding: 20px;
+    border-radius: 30px;
+}
+.page_content{
+	flex-direction: column;
+	align-items: center;
+}
+.prokat_desc{
+	padding: 10px;
+}
+.prokat_block img{
+	border-radius: 30px;
+}
+.prokat_priсe{
+	
+	margin: 0px 10px 0px 10px;
+}
+.prokat_name{
+	font-weight: 700;
+	padding-top: 10px;
+}
+.prokat_priсe_block{
+	font-weight: 700;
+	width: 100%;
+    display: flex;
+	justify-content: center;
+}
