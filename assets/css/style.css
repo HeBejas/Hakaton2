@@ -38,7 +38,7 @@ nav {
     align-items: center;
     height: 120px;
 }
-nav a {
+nav a, .drop_btn {
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
@@ -46,24 +46,34 @@ nav a {
     margin: 0px 10px;
     padding: 10px;
     border-radius: 15px;
+    cursor: pointer;
     transition: all .3s;
 }
-.active_header_btn, nav a:hover, footer a:hover {
+.active_header_btn, .header_hover:hover, footer a:hover {
     background: var(--color-yellow);
     color: var(--color-black);
 }
 .drop_container {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 .drop_btn {
+    display: flex;
+    justify-content: space-between;
     font-size: 22px;
     font-weight: bold;
     text-decoration: none;
-    color: #fff;  
+    color: #fff;
+    width: 190px;
+    z-index: 1;
 }
 .drop {
-    display: none;
+    position: absolute;
+    margin-top: 100px;
+    padding-top: 50px;
+    display: flex;
     flex-direction: column;
 
 }
@@ -74,6 +84,15 @@ nav div {
     position: absolute;
     transform: translate(-50%, 25%);
     left: 50%;
+}
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icons a {
+    margin: 0px 10px;
+    padding: 0px;
 }
 /* FOOTER */
 footer {
