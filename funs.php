@@ -17,54 +17,64 @@
             <h2>Развлечения</h2>
             <div class="information_block">В деревне Мувыр можно наслаждаться природой, прогуляться по лесу до висячего моста, прокатиться на лодке, рыбачить, организовать барбекю, устроить пикник в беседке или под открытым небом и многое другое</div>
             <div class="prokat_catalog">
-                <div class="prokat_block wow animate__animated animate__fadeInUp">
-                    <div class="fun_img_container">
-                        <img src="assets/images/fun2.jpg">
-                    </div>
-                    <div class="prokat_name">Лодка</div>
-                    <div class="prokat_desc">30 мин Вместимость одной лодки 3 взрослых 1 ребёнок</div>
-                    <div class="prokat_priсe_block"> От <span class="prokat_priсe"> 400 </span> За человека</div>
-                </div>
-                <div class="prokat_block wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                    <div class="fun_img_container">
-                        <img src="assets/images/fun2.jpg">
-                    </div>
-                    <div class="prokat_name">Лодка</div>
-                    <div class="prokat_desc">30 мин Вместимость одной лодки 3 взрослых 1 ребёнок</div>
-                    <div class="prokat_priсe_block"> От <div class="prokat_priсe"> 400 </div> За человека</div>
-                </div>
-                <div class="prokat_block wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-                    <div class="fun_img_container">
-                        <img src="assets/images/fun2.jpg">
-                    </div>
-                    <div class="prokat_name">Лодка</div>
-                    <div class="prokat_desc">30 мин Вместимость одной лодки 3 взрослых 1 ребёнок</div>
-                    <div class="prokat_priсe_block"> От <div class="prokat_priсe"> 400 </div> За человека</div>
-                </div>
-                <div class="prokat_block wow animate__animated animate__fadeInUp">
-                    <div class="fun_img_container">
-                        <img src="assets/images/fun2.jpg">
-                    </div>
-                    <div class="prokat_name">Лодка</div>
-                    <div class="prokat_desc">30 мин Вместимость одной лодки 3 взрослых 1 ребёнок</div>
-                    <div class="prokat_priсe_block"> От <div class="prokat_priсe"> 400 </div> За человека</div>
-                </div>
-                <div class="prokat_block wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                    <div class="fun_img_container">
-                        <img src="assets/images/fun2.jpg">
-                    </div>
-                    <div class="prokat_name">Лодка</div>
-                    <div class="prokat_desc">30 мин Вместимость одной лодки 3 взрослых 1 ребёнок</div>
-                    <div class="prokat_priсe_block"> От <div class="prokat_priсe"> 400 </div> За человека</div>
-                </div>
-                <div class="prokat_block wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
-                    <div class="fun_img_container">
-                        <img src="assets/images/fun2.jpg">
-                    </div>
-                    <div class="prokat_name">Лодка</div>
-                    <div class="prokat_desc">30 мин Вместимость одной лодки 3 взрослых 1 ребёнок</div>
-                    <div class="prokat_priсe_block"> От <div class="prokat_priсe"> 400 </div> За человека</div>
-                </div>
+                <?php
+                    include("connect.php");
+                    $query="SELECT * FROM drive";
+                    $link = mysqli_connect($host, $user, $password, $db_name); 
+                    $result = mysqli_query($link, $query);
+                    if($result == false) {
+                        die("Произошла ошибка при выполнении запроса "); 
+                    }
+
+                    else {
+                        for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+                        if(empty($data))
+                        {
+                            echo"Новых развлечений нет!";
+                        }
+                        else{
+                            $count=1;
+                            foreach ($data as $row) {
+                                if($count == 1){
+                                echo'
+                                    <div class="prokat_block wow animate__animated animate__fadeInUp">
+                                        <div class="fun_img_container">
+                                            <img src="'.$row["pic_drive"].'">
+                                        </div>
+                                        <div class="prokat_name">'.$row["name_drive"].'</div>
+                                        <div class="prokat_desc">'.$row["desc_drive"].'</div>
+                                        <div class="prokat_priсe_block">'.$row["price_drive"].'</div>
+                                    </div>
+                                ';}
+                                else if($count == 2){
+                                echo'
+                                    <div class="prokat_block wow animate__animated animate__fadeInUp"  data-wow-delay="0.2s">
+                                        <div class="fun_img_container">
+                                            <img src="'.$row["pic_drive"].'">
+                                        </div>
+                                        <div class="prokat_name">'.$row["name_drive"].'</div>
+                                        <div class="prokat_desc">'.$row["desc_drive"].'</div>
+                                        <div class="prokat_priсe_block">'.$row["price_drive"].'</div>
+                                    </div>
+                                ';}
+                                else if($count == 3){
+                                echo'
+                                    <div class="prokat_block wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+                                        <div class="fun_img_container">
+                                            <img src="'.$row["pic_drive"].'">
+                                        </div>
+                                        <div class="prokat_name">'.$row["name_drive"].'</div>
+                                        <div class="prokat_desc">'.$row["desc_drive"].'</div>
+                                        <div class="prokat_priсe_block">'.$row["price_drive"].'</div>
+                                    </div>
+                                ';
+                                $count = 0;}
+                                $count++;
+                            }
+                        }
+                    }
+
+                ?>
             </div>
         </div>
     </div>

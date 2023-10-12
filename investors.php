@@ -14,34 +14,40 @@
     <div class="container mt">
         <div class="goals_title">Наши Цели</div>
         <div class="goals">
-            <div class="goal wow animate__animated animate__backInUp">
-                <div class="goal_img_container">
-                    <img src="assets/images/hes.jpg" alt="Фото проекта">
-                </div>
-                <div class="goal_text">
-                    <div class="goal_header">Восстановить ГЭС</div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
-                </div>
-            </div>
-            <div class="goal wow animate__animated animate__backInUp">
-                <div class="goal_img_container">
-                    <img src="assets/images/hes.jpg" alt="Фото проекта">
-                </div>
-                <div class="goal_text">
-                    <div class="goal_header">Восстановить ГЭС</div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
-                </div>
-            </div>
-            <div class="goal wow animate__animated animate__backInUp">
-                <div class="goal_img_container">
-                    <img src="assets/images/hes.jpg" alt="Фото проекта">
-                </div>
-                <div class="goal_text">
-                    <div class="goal_header">Восстановить ГЭС</div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
-                </div>
-            </div>
-        </div>
+                <?php
+                    include("connect.php");
+                    $query="SELECT * FROM project";
+                    $link = mysqli_connect($host, $user, $password, $db_name); 
+                    $result = mysqli_query($link, $query);
+                    if($result == false) {
+                        die("Произошла ошибка при выполнении запроса "); 
+                    }
+
+                    else {
+                        for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+                        if(empty($data))
+                        {
+                            echo"Новых развлечений нет!";
+                        }
+                        else{
+                            foreach ($data as $row) {
+                                echo'
+                                    <div class="goal wow animate__animated animate__backInUp">
+                                        <div class="goal_img_container">
+                                            <img src="'.$row["pic_project"].'" alt="Фото проекта">
+                                        </div>
+                                        <div class="goal_text">
+                                            <div class="goal_header">'.$row["name_project"].'</div>
+                                            <div class="text">'.$row["desc_project"].'</div>
+                                        </div>
+                                    </div>
+                                ';
+                            }
+                        }
+                    }
+
+                ?>
+    </div>
         <div class="investors">Инвестируя в возрожденную деревню Мувыр, вы не только получите выгоду и прибыль, но и внесете значимый вклад в развитие этого прекрасного места. Мы гарантируем прозрачность, надежность и сотрудничество на взаимовыгодных условиях. </div>
     </div>
     <?include 'include/footer.php'?>

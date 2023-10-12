@@ -18,42 +18,58 @@
     <div class="container mt">
         <div class="header">Гостевые домики</div>
         <div class="houses_catalog">
-            <div class="h_house wow animate__animated animate__fadeInUp">
-                <div class="h_house_img_container">
-                    <img src="assets/images/house1.jpg" alt="Фото домика" second_image="assets/images/house2.jpg">
-                </div>
-                <div class="h_title">Домик 1</div>
-                <div class="h_price_number">4 чел., 3300р.</div>
-                <div class="h_desc">
-                    <p>Туалет, умывальник на улице</p>
-                    <p>Есть костровая зона, в которой можно приготовить еду в летнее время. Мангал, котел, казан можно взять в аренду.</p>
-                </div>
-                <div class="h_btn" id="1">Бронировать</div>
-            </div>
-            <div class="h_house wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                <div class="h_house_img_container">
-                    <img src="assets/images/house1.jpg" alt="Фото домика" second_image="assets/images/house2.jpg">
-                </div>
-                <div class="h_title">Домик 1</div>
-                <div class="h_price_number">4 чел., 3300р.</div>
-                <div class="h_desc">
-                    <p>Туалет, умывальник на улице</p>
-                    <p>Есть костровая зона, в которой можно приготовить еду в летнее время. Мангал, котел, казан можно взять в аренду.</p>
-                </div>
-                <div class="h_btn" id="1">Бронировать</div>
-            </div>
-            <div class="h_house wow animate__animated animate__fadeInUp">
-                <div class="h_house_img_container">
-                    <img src="assets/images/house1.jpg" alt="Фото домика" second_image="assets/images/house2.jpg">
-                </div>
-                <div class="h_title">Домик 1</div>
-                <div class="h_price_number">4 чел., 3300р.</div>
-                <div class="h_desc">
-                    <p>Туалет, умывальник на улице</p>
-                    <p>Есть костровая зона, в которой можно приготовить еду в летнее время. Мангал, котел, казан можно взять в аренду.</p>
-                </div>
-                <div class="h_btn" id="1">Бронировать</div>
-            </div>
+            <?php
+                include("connect.php");
+                $query="SELECT * FROM house";
+                $link = mysqli_connect($host, $user, $password, $db_name); 
+                $result = mysqli_query($link, $query);
+                if($result == false) {
+                    die("Произошла ошибка при выполнении запроса "); 
+                }
+
+                else {
+                    for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+                    if(empty($data))
+                    {
+                        echo"Новых развлечений нет!";
+                    }
+                    else{
+                        $count=1;
+                        foreach ($data as $row) {
+                            if($count%2 == 0) {
+                            echo'
+                                <div class="h_house wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                                    <div class="h_house_img_container">
+                                        <img src="'.$row["pic_house"].'" alt="Фото домика" second_image="'.$row["pic2_house"].'">
+                                    </div>
+                                    <div class="h_title">'.$row["name_house"].'</div>
+                                    <div class="h_price_number">'.$row["people_house"].' чел., '.$row["price_house"].'р.</div>
+                                    <div class="h_desc">
+                                        '.$row["desc_house"].'
+                                    </div>
+                                    <div class="h_btn" id="'.$row["id_house"].'">Бронировать</div>
+                                </div>
+                            ';}
+                            else{
+                                echo'
+                                <div class="h_house wow animate__animated animate__fadeInUp">
+                                    <div class="h_house_img_container">
+                                        <img src="'.$row["pic_house"].'" alt="Фото домика" second_image="'.$row["pic2_house"].'">
+                                    </div>
+                                    <div class="h_title">'.$row["name_house"].'</div>
+                                    <div class="h_price_number">'.$row["people_house"].' чел., '.$row["price_house"].'р.</div>
+                                    <div class="h_desc">
+                                        '.$row["desc_house"].'
+                                    </div>
+                                    <div class="h_btn" id="'.$row["id_house"].'">Бронировать</div>
+                                </div>
+                            ';}
+                            $count++;
+                        }
+                    }
+                }
+
+            ?>
         </div>
         <div class="modal_bachdrop" id="modal_backdrop">
             <div class="modal">

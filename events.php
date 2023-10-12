@@ -16,44 +16,42 @@
 <body>
     <?include 'include/header.php'?>
     <div class="container mt">
-        <div class="header">Экскурсии</div>
+        <div class="header">Мероприятия</div>
         <div class="events_catalog">
-            <div class="e_event wow animate__animated animate__fadeInUp">
-                <div class="e_event_img_container">
-                    <img src="assets/images/event1.jpg" alt="Фото домика" second_image="assets/images/event2.jpg">
-                </div>
-                <div class="e_title">Домик 1</div>
-                <div class="e_price_number">4 чел., 3300р.</div>
-                <div class="e_desc">
-                    <p>Туалет, умывальник на улице</p>
-                    <p>Есть костровая зона, в которой можно приготовить еду в летнее время. Мангал, котел, казан можно взять в аренду.</p>
-                </div>
-                <div class="e_btn" id="1">Бронировать</div>
-            </div>
-            <div class="e_event wow animate__animated animate__fadeInUp">
-                <div class="e_event_img_container">
-                    <img src="assets/images/event1.jpg" alt="Фото домика" second_image="assets/images/event2.jpg">
-                </div>
-                <div class="e_title">Домик 1</div>
-                <div class="e_price_number">4 чел., 3300р.</div>
-                <div class="e_desc">
-                    <p>Туалет, умывальник на улице</p>
-                    <p>Есть костровая зона, в которой можно приготовить еду в летнее время. Мангал, котел, казан можно взять в аренду.</p>
-                </div>
-                <div class="e_btn" id="1">Бронировать</div>
-            </div>
-            <div class="e_event wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
-                <div class="e_event_img_container">
-                    <img src="assets/images/event1.jpg" alt="Фото домика" second_image="assets/images/event2.jpg">
-                </div>
-                <div class="e_title">Домик 1</div>
-                <div class="e_price_number">4 чел., 3300р.</div>
-                <div class="e_desc">
-                    <p>Туалет, умывальник на улице</p>
-                    <p>Есть костровая зона, в которой можно приготовить еду в летнее время. Мангал, котел, казан можно взять в аренду.</p>
-                </div>
-                <div class="e_btn" id="1">Бронировать</div>
-            </div>
+           <?php
+                include("connect.php");
+                $query="SELECT * FROM event";
+                $link = mysqli_connect($host, $user, $password, $db_name); 
+                $result = mysqli_query($link, $query);
+                if($result == false) {
+                    die("Произошла ошибка при выполнении запроса "); 
+                }
+
+                else {
+                    for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+                    if(empty($data))
+                    {
+                        echo"Новых мероприятий нет!";
+                    }
+                    else{
+                        foreach ($data as $row) {
+                            echo'
+                                <div class="e_event wow animate__animated animate__fadeInUp">
+                                    <div class="e_event_img_container">
+                                        <img src="'.$row["pic_event"].'" alt="Фото домика" second_image="assets/images/event2.jpg">
+                                    </div>
+                                    <div class="e_title">'.$row["name_event"].'</div>
+                                    <div class="e_price_number">'.$row["time_event"].'</div>
+                                    <div class="e_desc">
+                                        '.$row["desc_event"].'
+                                    </div>
+                                    <div class="e_btn" id="1">Бронировать</div>
+                                </div>                            ';
+                        }
+                    }
+                }
+
+            ?>
         </div>
     </div>
     <div class="container">

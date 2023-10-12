@@ -23,23 +23,61 @@
             <div class="information_block" style="margin-top: 25px;">Ознакомьтесь с нашей продукцией</div>
 
             <div class="milk_prod_cat" style="margin-top: 25px;">
-                <div class="milk_prod_pos wow animate__animated animate__fadeInLeft">
-                    <img src="assets/images/milk1.png">
-                    <div class="milk_prod_name">Сыр мягкий "Мувырский"</div>
-                </div>
-                <div class="milk_prod_pos wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
-                    <img src="assets/images/milk1.png">
-                    <div class="milk_prod_name">Сыр мягкий "Мувырский"</div>
-                </div>
-                <div class="milk_prod_pos wow animate__animated animate__fadeInLeft" data-wow-delay="0.4s">
-                    <img src="assets/images/milk1.png">
-                    <div class="milk_prod_name">Сыр мягкий "Мувырский"</div>
-                </div>
+                <?php
+                    include("connect.php");
+                    $query="SELECT * FROM milk";
+                    $link = mysqli_connect($host, $user, $password, $db_name); 
+                    $result = mysqli_query($link, $query);
+                    if($result == false) {
+                        die("Произошла ошибка при выполнении запроса "); 
+                    }
+
+                    else {
+                        for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+                        if(empty($data))
+                        {
+                            echo"Новых развлечений нет!";
+                        }
+                        else{
+                            foreach ($data as $row) {
+                                echo'
+                                    <div class="milk_prod_pos wow animate__animated animate__fadeInLeft">
+                                        <img src="'.$row["pic_milk"].'">
+                                        <div class="milk_prod_name">'.$row["name_milk"].'</div>
+                                    </div>
+                                ';
+                            }
+                        }
+                    }
+
+                ?>
             </div>
             <h2 style="margin-top: 50px;">Покупать Здесь</h2>
             <div class="information_block">Адреса торговых точек в г. Ижевск где вы можете приобрести продукцию мувырского молокозавода</div>
-            <div class="milk_shop_pos">г Ижевск, ул Азина, д. 4г. Ижевск</div>
-            <div class="milk_shop_pos">г Ижевск, ул 9 Января, д.239г </div>
+            <?php
+                    $query="SELECT * FROM address";
+                    $link = mysqli_connect($host, $user, $password, $db_name); 
+                    $result = mysqli_query($link, $query);
+                    if($result == false) {
+                        die("Произошла ошибка при выполнении запроса "); 
+                    }
+
+                    else {
+                        for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+                        if(empty($data))
+                        {
+                            echo"Новых развлечений нет!";
+                        }
+                        else{
+                            foreach ($data as $row) {
+                                echo'
+                                    <div class="milk_shop_pos">'.$row["name_address"].'</div>
+                                ';
+                            }
+                        }
+                    }
+
+                ?>
 
             <div class="milk_gallery" style="margin-top: 50px;">
                 <div><img src="assets/images/gallery1.jpg" class="wow animate__animated animate__fadeInUp" data-wow-delay="0.2s"></div>
