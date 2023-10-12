@@ -49,10 +49,17 @@
     padding: 15px 15px 30px;
     width: 420px;
 }
-.tour img {
-    border-radius: 40px;
+.tour .box {
+    height: 200px;
+    width: 320px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.box img {
     width: 100%;
-    margin: 0px auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .tour_header {
     color: #1B1A18;
