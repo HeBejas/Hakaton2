@@ -1,4 +1,10 @@
 <?php
+	echo '<script>
+                $(".modal_close").click(function(){
+                    $("#create_modal").css("display", "none");
+                    location.reload();
+                });
+            </script>';
 	include("../../connect.php");
     if(empty($_POST['name']) || empty($_POST['desc']) || empty($_POST['status']) || empty($_POST['pic']))
     {
@@ -18,12 +24,6 @@
         echo'
             Операция выполнена! 
             <div class="default_button modal_close">Закрыть</div>
-            <script>
-                $(".modal_close").click(function(){
-                    $("#create_modal").css("display", "none");
-                    location.reload();
-                });
-            </script>
         ';
     }
 ?>

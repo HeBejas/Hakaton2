@@ -52,7 +52,7 @@
         }
         else{
 	    	echo '
-			<table border="1">
+			<table border="1" id="address_table">
 				<thead>
 					<tr>
 						<th>№</th>
@@ -78,6 +78,11 @@
 	}
 ?>
 <script>
+		tablea = new DataTable('#address_table', {
+	    language: {
+	        url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/ru.json',
+	    },
+		});
 	$("#a_create").click(function(){
 		$("#create_modal").css("display", "flex");
 	});

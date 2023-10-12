@@ -1,5 +1,10 @@
 <?php
-
+    echo '<script>
+                $(".modal_close").click(function(){
+                    $("#delete_modal").css("display", "none");
+                    location.reload();
+                });
+            </script>';
 	include("../../connect.php");
     $query = "DELETE FROM address WHERE `address`.`id_address` = '$_POST[id]'";
     $link = mysqli_connect($host, $user, $password, $db_name); 
@@ -12,12 +17,6 @@
         echo'
             Операция выполнена! 
             <div class="default_button modal_close">Закрыть</div>
-            <script>
-                $(".modal_close").click(function(){
-                    $("#delete_modal").css("display", "none");
-                    location.reload();
-                });
-            </script>
         ';
     }
 ?>

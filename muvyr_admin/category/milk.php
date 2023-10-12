@@ -60,7 +60,7 @@
         }
         else{
 	    	echo '
-			<table border="1">
+			<table border="1" id="milk_table">
 				<thead>
 					<tr>
 						<th>№</th>
@@ -90,6 +90,11 @@
 	}
 ?>
 <script>
+	tablem = new DataTable('#milk_table', {
+    language: {
+        url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/ru.json',
+    },
+	});
 	$("#m_create").click(function(){
 		$("#create_modal").css("display", "flex");
 	});

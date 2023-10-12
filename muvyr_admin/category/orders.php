@@ -15,7 +15,7 @@
         }
         else{
 	    	echo '
-			<table border="1">
+			<table border="1" id="orders_table">
 				<thead>
 					<tr>
 						<th>№</th>
@@ -45,3 +45,10 @@
 
 
 ?>
+<script>
+	tableo = new DataTable('#orders_table', {
+    language: {
+        url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/ru.json',
+    },
+	});
+</script>

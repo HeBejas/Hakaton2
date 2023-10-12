@@ -2,9 +2,9 @@
 	<img src="logo.png">
 </div>
 <div id="sidebar_options">
-	<div class="sidebar_option" id="opt1">
+	<!-- <div class="sidebar_option" id="opt1">
 		Безопасность
-	</div>
+	</div>  НЕ ДОРАБОТАНО --> 
 	<div class="sidebar_option" id="opt2">
 		Брони
 	</div>

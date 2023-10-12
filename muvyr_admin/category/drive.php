@@ -64,7 +64,7 @@
         }
         else{
 	    	echo '
-			<table border="1">
+			<table border="1" id="drive_table">
 				<thead>
 					<tr>
 						<th>№</th>
@@ -96,6 +96,11 @@
 	}
 ?>
 <script>
+	tabled = new DataTable('#drive_table', {
+    language: {
+        url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/ru.json',
+    },
+	});
 	$("#d_create").click(function(){
 		$("#create_modal").css("display", "flex");
 	});

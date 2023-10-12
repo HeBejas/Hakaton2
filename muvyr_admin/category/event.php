@@ -64,7 +64,7 @@
         }
         else{
 	    	echo '
-			<table border="1">
+			<table border="1" id="event_table">
 				<thead>
 					<tr>
 						<th>№</th>
@@ -96,6 +96,11 @@
 	}
 ?>
 <script>
+	tablee = new DataTable('#event_table', {
+    language: {
+        url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/ru.json',
+    },
+	});
 	$("#e_create").click(function(){
 		$("#create_modal").css("display", "flex");
 	});

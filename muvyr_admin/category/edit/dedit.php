@@ -1,4 +1,10 @@
 <?php
+echo '<script>
+                $(".modal_close").click(function(){
+                    $("#edit_modal").css("display", "none");
+                    location.reload();
+                });
+            </script>';
 include("../../connect.php");
 $query = "SELECT * from drive WHERE id_drive='$_POST[id]'";
 $link = mysqli_connect($host, $user, $password, $db_name); 

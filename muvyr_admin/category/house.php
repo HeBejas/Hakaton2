@@ -73,7 +73,7 @@
         }
         else{
 	    	echo '
-			<table border="1">
+			<table border="1" id="house_table">
 				<thead>
 					<tr>
 						<th>№</th>
@@ -110,6 +110,11 @@
 ?>
 
 <script>
+	tableh = new DataTable('#house_table', {
+    language: {
+        url: '//cdn.datatables.net/plug-ins/1.13.6/i18n/ru.json',
+    },
+	});
 	$("#h_create").click(function(){
 		$("#create_modal").css("display", "flex");
 	});
