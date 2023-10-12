@@ -1,0 +1,122 @@
+.events_catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.e_event {
+    width: 47%;
+    margin-bottom: 80px;
+}
+.e_event:nth-child(1) {
+    width: 100%;
+}
+.e_event_img_container {
+    width: 100%;
+    height: 400px;
+}
+.e_event_img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+}
+.e_title {
+    font-size: 22px;
+    font-weight: 700;
+}
+.e_price_number {
+    font-weight: 500;
+}
+.header {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.page_content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.evene_position img{
+	width: 400px;
+}
+.evene_name{
+	text-align: inherit;
+    font-weight: 700;
+    font-size: 24px;
+	margin-left: 20px;
+    margin-top: 5px;
+}
+.evene_desc{
+	margin-left: 20px;
+    margin-bottom: 10px;
+
+}
+.evene_position img{
+	border-radius: 20px;
+}
+.marry_slider_box {
+    width: 100%;
+}
+.marry_slider_track_box {
+    width: 100%;
+}
+.marry_img_box1 {
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-block: 10px;
+}
+.marry_img_box2 {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.marry_img_box2 img:hover {
+    transform: scale(1.1);
+}
+.marry_slider_track_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+    transition: all .3s;
+}
+.page_content {
+    font-size: 20px;
+}
+.tel {
+    font-weight: 600;
+}
+h2 {
+    margin-bottom: 25px;
+}
+.information_block {
+    margin-block: 10px;
+}
+@media (max-width: 1200px){
+    .marry_img_box2 {
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (max-width: 950px) {
+    .marry_img_box2 {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (max-width: 650px) {
+    .marry_img_box1 {
+        height: 350px;  
+    }
+    .e_event {
+        width: 100%;
+    } 
+}

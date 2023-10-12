@@ -16,45 +16,48 @@
 <body>
     <?include 'include/header.php'?>
     <div class="container mt">
-        <div class="page_content">
-            <h2>Мероприятия</h2>
-            <div class="information_block">В Мувыре вас ждёт множество увлекательных мероприятий, расчитанных на то, чтобы оставить у вас самые яркие и теплиые воспоминания о нашей деревне</div>
-            <div class="events_catalog">
-                <div class="event_position wow animate__animated animate__fadeIn">
-                    <div class="event_position_time_desc">
-                        <div class="event_date">11.10 - 20.10</div>
-                        <div class="event_time">С 8.00 До 19.00</div>
-                    </div>
-                    <img src="assets/images/event1.PNG">
-                    <div class="event_position_desc_main">
-                        <div class="event_name">Масленица</div>
-                        <div class="event_desc">В Мувыре празднуется масленицаю. Всех Ждем!</div>
-                    </div>
+        <div class="header">Экскурсии</div>
+        <div class="events_catalog">
+            <div class="e_event wow animate__animated animate__fadeInUp">
+                <div class="e_event_img_container">
+                    <img src="assets/images/event1.jpg" alt="Фото домика" second_image="assets/images/event2.jpg">
                 </div>
-                <div class="event_position wow animate__animated animate__fadeInLeft">
-                    <div class="event_position_time_desc">
-                        <div class="event_date">11.10 - 20.10</div>
-                        <div class="event_time">С 8.00 До 19.00</div>
-                    </div>
-                    <img src="assets/images/event1.PNG">
-                    <div class="event_position_desc">
-                        <div class="event_name">Масленица</div>
-                        <div class="event_desc">В Мувыре празднуется масленицаю. Всех Ждем!</div>
-                    </div>
+                <div class="e_title">Домик 1</div>
+                <div class="e_price_number">4 чел., 3300р.</div>
+                <div class="e_desc">
+                    <p>Туалет, умывальник на улице</p>
+                    <p>Есть костровая зона, в которой можно приготовить еду в летнее время. Мангал, котел, казан можно взять в аренду.</p>
                 </div>
-                <div class="event_position wow animate__animated animate__fadeInRight">
-                    <div class="event_position_time_desc">
-                        <div class="event_date">11.10 - 20.10</div>
-                        <div class="event_time">С 8.00 До 19.00</div>
-                    </div>
-                    <img src="assets/images/event1.PNG">
-                    <div class="event_position_desc">
-                        <div class="event_name">Масленица</div>
-                        <div class="event_desc">В Мувыре празднуется масленицаю. Всех Ждем!</div>
-                    </div>
-                </div>
+                <div class="e_btn" id="1">Бронировать</div>
             </div>
-            <button>Еще</button>
+            <div class="e_event wow animate__animated animate__fadeInUp">
+                <div class="e_event_img_container">
+                    <img src="assets/images/event1.jpg" alt="Фото домика" second_image="assets/images/event2.jpg">
+                </div>
+                <div class="e_title">Домик 1</div>
+                <div class="e_price_number">4 чел., 3300р.</div>
+                <div class="e_desc">
+                    <p>Туалет, умывальник на улице</p>
+                    <p>Есть костровая зона, в которой можно приготовить еду в летнее время. Мангал, котел, казан можно взять в аренду.</p>
+                </div>
+                <div class="e_btn" id="1">Бронировать</div>
+            </div>
+            <div class="e_event wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
+                <div class="e_event_img_container">
+                    <img src="assets/images/event1.jpg" alt="Фото домика" second_image="assets/images/event2.jpg">
+                </div>
+                <div class="e_title">Домик 1</div>
+                <div class="e_price_number">4 чел., 3300р.</div>
+                <div class="e_desc">
+                    <p>Туалет, умывальник на улице</p>
+                    <p>Есть костровая зона, в которой можно приготовить еду в летнее время. Мангал, котел, казан можно взять в аренду.</p>
+                </div>
+                <div class="e_btn" id="1">Бронировать</div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="page_content">
             <h2>Проведение свадеб</h2>
             <div class="information_block">Где играть свадьбу? Еще сомневайтесь? Еще не определились? 
             Конечно в Мувыре!!!
@@ -171,6 +174,7 @@
             asNavFor: '.marry_slider_2',
         });
         $(".marry_slider_2").slick({
+            arrows: false,
             slidesToShow: 5,
             slidesToScroll: 1,
             asNavFor: '.marry_slider_1',
