@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Окт 12 2023 г., 09:46
+-- Время создания: Окт 12 2023 г., 12:17
 -- Версия сервера: 8.0.30
 -- Версия PHP: 7.2.34
 
@@ -124,7 +124,8 @@ INSERT INTO `drive` (`id_drive`, `name_drive`, `desc_drive`, `price_drive`, `pic
 (11, 'Рыбалка', 'Рыба, которую можно поймать: щука, карась, сорожка, линь', 'Бесплатно', 'https://static.tildacdn.com/tild3965-3333-4334-a235-323466336338/Screenshot_20230616-.jpg'),
 (12, 'Катание на лошадях', 'Катание на пони: 100 руб - 35 мин.\nКатание верхом: 500 руб - 35 мин.', 'Цены различаются', 'https://static.tildacdn.com/tild6231-3832-4235-b038-343233303065/yAxFckiyj3Q.jpg'),
 (13, 'SUP борд', ' - это скольжение по воде при помощи доски и весла. Научиться этому процессу сможет абсолютно каждый, независимо от возраста и спортивной подготовки. ', '500 руб - 1 час/1 чел.', 'https://static.tildacdn.com/tild6335-3964-4637-b030-646564323333/Screenshot_20230612-.jpg'),
-(14, 'Висячий мост', 'Подвесной мост через речку Лоза – еще одна причина посетить это интересное место', 'Бесплатно', 'https://static.tildacdn.com/tild3532-6466-4162-b538-383832313537/JY3PwdYiTbU.jpg');
+(14, 'Висячий мост', 'Подвесной мост через речку Лоза – еще одна причина посетить это интересное место', 'Бесплатно', 'https://static.tildacdn.com/tild3532-6466-4162-b538-383832313537/JY3PwdYiTbU.jpg'),
+(15, 'Аренда беседок', 'Аренда беседок', '100 руб - 30 мин', 'https://static.tildacdn.com/tild3866-3036-4864-a165-316538643639/Screenshot_20230611-.jpg');
 
 -- --------------------------------------------------------
 
@@ -145,9 +146,9 @@ CREATE TABLE `event` (
 --
 
 INSERT INTO `event` (`id_event`, `name_event`, `desc_event`, `time_event`, `pic_event`) VALUES
-(2, 'Масленница', 'Отмечаем масленницу в Мувыре', '5 часов', 'https://img.magput.ru/pics/large/8b852a94-6cf3-4270-80a5-d4fc9cd1d1df.jpg'),
-(3, 'Фестиваль возрождённых деревень', 'Фестиваль возрожденных деревень - это площадка, где представлены все\nсферы жизни деревни - быт, культура, работа. В рамках фестиваля будут\nпредставлены тематические площадки, секции, экскурсии:\n«Быт»\n- жилой дом, усадьба - устройство дома, архитектура, интерьер, печь, наличники,\nмебель;\n- животное и хозяйственное подворье.\n«Культура»\n- народный костюм;\n- декоративно-прикладное искусство, ремесла;\n- исполнительское мастерство (танец, пение, сказительство, музыкальные\nинструменты, театр/сказки);\n- обряды;\n- народные игры;\n- физическая культура (спортивные игры).\n«Работа»\n- земледелие, обработка земли;\n- растениеводство;\n- пчеловодство;\n- молочная ферма;\n- ремесленные мастерские (деревообработка, кузнечное дело, ткачество,\nгончарное дело);\n- механизация, ИТ (трактора, дроны и тд);\n- конный транспорт;\n- рыбалка.', '48 часов', 'https://visitudmurtia.org/upload/iblock/ac7/3ptg1331vhxb59d9mmybpalos1gpi5os.jpg'),
-(4, 'Новый Год', 'Отмечаем Новый Год в Мувыре', '96 часов', 'https://www.holiday.by/files/byblog/71ccf020953010c87799462189d3443a-thumb-780x1500.jpg');
+(2, 'Масленница', 'Отмечаем масленницу в Мувыре', '20.02-31.03', 'https://img.magput.ru/pics/large/8b852a94-6cf3-4270-80a5-d4fc9cd1d1df.jpg'),
+(3, 'Фестиваль возрождённых деревень', 'Фестиваль возрожденных деревень - это площадка, где представлены все\nсферы жизни деревни - быт, культура, работа. В рамках фестиваля будут\nпредставлены тематические площадки, секции, экскурсии:\n«Быт»\n- жилой дом, усадьба - устройство дома, архитектура, интерьер, печь, наличники,\nмебель;\n- животное и хозяйственное подворье.\n«Культура»\n- народный костюм;\n- декоративно-прикладное искусство, ремесла;\n- исполнительское мастерство (танец, пение, сказительство, музыкальные\nинструменты, театр/сказки);\n- обряды;\n- народные игры;\n- физическая культура (спортивные игры).\n«Работа»\n- земледелие, обработка земли;\n- растениеводство;\n- пчеловодство;\n- молочная ферма;\n- ремесленные мастерские (деревообработка, кузнечное дело, ткачество,\nгончарное дело);\n- механизация, ИТ (трактора, дроны и тд);\n- конный транспорт;\n- рыбалка.', '10.06-10.07', 'https://visitudmurtia.org/upload/iblock/ac7/3ptg1331vhxb59d9mmybpalos1gpi5os.jpg'),
+(4, 'Новый Год', 'Отмечаем Новый Год в Мувыре', '30.12-03.01', 'https://www.holiday.by/files/byblog/71ccf020953010c87799462189d3443a-thumb-780x1500.jpg');
 
 -- --------------------------------------------------------
 
@@ -198,21 +199,39 @@ INSERT INTO `milk` (`id_milk`, `name_milk`, `desc_milk`, `pic_milk`) VALUES
 (5, 'Йогурт клубничный', 'Йогурт фруктовый со вкусом клубники', 'https://sun9-79.userapi.com/impg/8mHyL_hskCYIJPy-pIm-8dD_QO6AVHuCj2K5sQ/rxf_4kzRxEc.jpg?size=1080x1123&quality=96&sign=c768343a4c8517d3cfd77ecb4bd84e39&type=album'),
 (6, 'Йогурт ананасовый', 'Йогурт фруктовый со вкусом ананаса', 'https://sun9-16.userapi.com/impg/x2d38R-lOUIOe9Aw1dXVwWDy7GxxdSuw1m06Iw/O-f1MkVvefU.jpg?size=1080x1208&quality=96&sign=f596984426bc71bab7d7c48f2edaa6df&type=album'),
 (7, 'Творог', 'Творог 5%', 'https://sun9-80.userapi.com/impg/2JVRcrq5wj2myP88acMCyP9UYhjn66yAXuQ-pw/BZtPQSfR0Ls.jpg?size=1080x1335&quality=96&sign=0d602a24d0867cb5082c4ef644d0358a&type=album'),
-(8, 'сыр', 'Мувырский сыр', 'https://sun9-6.userapi.com/impg/86duwRksJ6zRrD0gZfo41Jd2ZKmeeBJbahM9Xw/lODdwMN4NDg.jpg?size=900x600&quality=95&sign=da50f1d3736843551dc20af3baecbcd9&type=album');
+(8, 'Cыр \"Мувырский\"', 'Мувырский сыр', 'https://sun9-6.userapi.com/impg/86duwRksJ6zRrD0gZfo41Jd2ZKmeeBJbahM9Xw/lODdwMN4NDg.jpg?size=900x600&quality=95&sign=da50f1d3736843551dc20af3baecbcd9&type=album');
 
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `orders`
+-- Структура таблицы `orders_house`
 --
 
-CREATE TABLE `orders` (
+CREATE TABLE `orders_house` (
   `id_orders` int NOT NULL,
   `id_house` int NOT NULL,
   `name_orders` varchar(200) NOT NULL,
-  `phone_orders` varchar(20) NOT NULL,
-  `start_orders` date NOT NULL,
-  `end_orders` date NOT NULL
+  `phone_orders` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Дамп данных таблицы `orders_house`
+--
+
+INSERT INTO `orders_house` (`id_orders`, `id_house`, `name_orders`, `phone_orders`) VALUES
+(1, 1, 'asdasdasd', '7965326594'),
+(2, 4, 'кононенко', '123234141234123');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `orders_marry`
+--
+
+CREATE TABLE `orders_marry` (
+  `id_orders` int NOT NULL,
+  `name_orders` varchar(100) NOT NULL,
+  `phone_orders` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -300,11 +319,17 @@ ALTER TABLE `milk`
   ADD PRIMARY KEY (`id_milk`);
 
 --
--- Индексы таблицы `orders`
+-- Индексы таблицы `orders_house`
 --
-ALTER TABLE `orders`
+ALTER TABLE `orders_house`
   ADD PRIMARY KEY (`id_orders`),
   ADD KEY `id_house` (`id_house`);
+
+--
+-- Индексы таблицы `orders_marry`
+--
+ALTER TABLE `orders_marry`
+  ADD PRIMARY KEY (`id_orders`);
 
 --
 -- Индексы таблицы `project`
@@ -338,7 +363,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT для таблицы `drive`
 --
 ALTER TABLE `drive`
-  MODIFY `id_drive` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_drive` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT для таблицы `event`
@@ -359,10 +384,16 @@ ALTER TABLE `milk`
   MODIFY `id_milk` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT для таблицы `orders`
+-- AUTO_INCREMENT для таблицы `orders_house`
 --
-ALTER TABLE `orders`
-  MODIFY `id_orders` int NOT NULL AUTO_INCREMENT;
+ALTER TABLE `orders_house`
+  MODIFY `id_orders` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT для таблицы `orders_marry`
+--
+ALTER TABLE `orders_marry`
+  MODIFY `id_orders` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `project`
@@ -381,10 +412,10 @@ ALTER TABLE `tours`
 --
 
 --
--- Ограничения внешнего ключа таблицы `orders`
+-- Ограничения внешнего ключа таблицы `orders_house`
 --
-ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`id_house`) REFERENCES `house` (`id_house`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+ALTER TABLE `orders_house`
+  ADD CONSTRAINT `orders_house_ibfk_1` FOREIGN KEY (`id_house`) REFERENCES `house` (`id_house`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
