@@ -15,23 +15,42 @@
                 <div id="tour_prev_arrow" class="arrow"><</div>
                 <div class="track_box">
                     <div class="tours" id="tour_slider">
-                        <div class="tour">
-                            <img src="assets/images/event.png" alt="ивент">
-                            <div class="tour_header">Висячий мост</div>
-                            <div class="tour_text">Подвесной мост через речку Лоза – еще одна причина посетить это интересное место</div>
-                        </div>
-                        <div class="tour">
-                            <img src="assets/images/event.png" alt="ивент">
-                            <div class="tour_header">Висячий мост</div>
-                            <div class="tour_text">Подвесной мост через речку Лоза – еще одна причина посетить это интересное место</div>
-                        </div>
+                        <?php
+                            include("connect.php");
+                            $query="SELECT * FROM tours";
+                            $link = mysqli_connect($host, $user, $password, $db_name); 
+                            $result = mysqli_query($link, $query);
+                            if($result == false) {
+                                die("Произошла ошибка при выполнении запроса "); 
+                            }
+
+                            else {
+                                for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+                                if(empty($data))
+                                {
+                                    echo"Новых развлечений нет!";
+                                }
+                                else{
+                                    foreach ($data as $row) {
+                                        echo'
+                                            <div class="tour">
+                                                <div class="box"><img src="'.$row["pic_tour"].'" alt="ивент"></div>
+                                                <div class="tour_header">'.$row["name_tour"].'</div>
+                                                <div class="tour_text">'.substr($row["desc_tour"], 0, 58)."...".'</div>
+                                            </div>
+                                        ';
+                                    }
+                                }
+                            }
+
+                        ?>
                     </div>
                 </div>
                 <div id="tour_next_arrow" class="arrow">></div>
             </div>
         </div>
         <div style="float: right; margin-top: 15px">
-            <a href="" class="page_link">Все Развлечения</a>
+            <a href="tours.php" class="page_link">Все Экскурсии</a>
         </div>
     </div>
     <div class="container margin_top">
@@ -43,32 +62,40 @@
             <div id="event_prev_arrow" class="arrow"><</div>
             <div class="event_track_box">
                 <div class="events" id="event_slider">
-                    <div class="event wow animate__animated animate__fadeInUp">
-                        <img src="assets/images/event.png" alt="ивент">
-                        <div class="tour_header">Висячий мост</div>
-                        <div class="tour_text">Подвесной мост через речку Лоза – еще одна причина посетить это интересное место</div>
-                    </div>
-                    <div class="event wow animate__animated animate__fadeInUp" data-wow-delay="0.15s">
-                        <img src="assets/images/event.png" alt="ивент">
-                        <div class="tour_header">Висячий мост</div>
-                        <div class="tour_text">Подвесной мост через речку Лоза – еще одна причина посетить это интересное место</div>
-                    </div>
-                    <div class="event wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
-                        <img src="assets/images/event.png" alt="ивент">
-                        <div class="tour_header">Висячий мост</div>
-                        <div class="tour_text">Подвесной мост через речку Лоза – еще одна причина посетить это интересное место</div>
-                    </div>
-                    <div class="event wow animate__animated animate__fadeInUp">
-                        <img src="assets/images/event.png" alt="ивент">
-                        <div class="tour_header">Висячий мост</div>
-                        <div class="tour_text">Подвесной мост через речку Лоза – еще одна причина посетить это интересное место</div>
-                    </div>
+                    <?php
+                            $query="SELECT * FROM event";
+                            $link = mysqli_connect($host, $user, $password, $db_name); 
+                            $result = mysqli_query($link, $query);
+                            if($result == false) {
+                                die("Произошла ошибка при выполнении запроса "); 
+                            }
+
+                            else {
+                                for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+                                if(empty($data))
+                                {
+                                    echo"Новых развлечений нет!";
+                                }
+                                else{
+                                    foreach ($data as $row) {
+                                        echo'
+                                            <div class="event wow animate__animated animate__fadeInUp">
+                                                <div class="box"><img src="'.$row["pic_event"].'" alt="ивент"></div>
+                                                <div class="tour_header">'.$row["name_event"].'</div>
+                                                <div class="tour_text">'.substr($row["desc_event"], 0, 60)."...".'</div>
+                                            </div>
+                                        ';
+                                    }
+                                }
+                            }
+
+                        ?>
                 </div>
             </div>
             <div id="event_next_arrow" class="arrow">></div>
         </div>
         <div style="float: right; margin-top: 15px">
-            <a href="" class="page_link">Все Мероприятия</a>
+            <a href="events.php" class="page_link">Все Мероприятия</a>
         </div>
     </div>
     <div class="container margin_top">
@@ -77,7 +104,7 @@
                 <div class="header">Организация Свадеб</div>
                 <div class="text">Мы предлагаем уникальную возможность создать незабываемое свадебное торжество в живописной деревне Мувыр. Наша команда профессионалов занимается всеми аспектами организации свадебного мероприятия, начиная от выбора идеального места для проведения церемонии и банкета до оформления и развлекательной программы</div>
                 <div style="margin-top: 20px">
-                    <a href="" class="page_link">Все Мероприятия</a>
+                    <a href="events.php" class="page_link">Все Мероприятия</a>
                 </div>
             </div>
             <img src="assets/images/marry.jpg" alt="Свадьбы" class="marry_img wow animate__animated animate__zoomIn">
@@ -102,7 +129,7 @@
             </div>
         </div>
         <div style="float: right; margin-top: 15px">
-            <a href="" class="page_link">Развлечения</a>
+            <a href="funs.php" class="page_link">Развлечения</a>
         </div>
     </div>
     <div class="container margin_top">
@@ -114,27 +141,36 @@
             </div>
         </div>
         <div class="houses">
-            <div class="house wow animate__animated animate__fadeInLeft">
-                <div class="house_img_container">
-                    <img src="assets/images/house1.jpg" alt="Домик">
-                </div>
-                <div class="house_title">Домик 1</div>
-                <div class="house_desc">4 чел., 3300 р.</div>
-            </div>
-            <div class="house wow animate__animated animate__fadeInLeft" data-wow-delay="0.3s">
-                <div class="house_img_container">
-                    <img src="assets/images/house2.jpg" alt="Домик">
-                </div>
-                <div class="house_title">Домик 2</div>
-                <div class="house_desc">4 чел., 3300 р.</div>
-            </div>
-            <div class="house wow animate__animated animate__fadeInLeft" data-wow-delay="0.45s">
-                <div class="house_img_container">
-                    <img src="assets/images/house3.jpg" alt="Домик">
-                </div>
-                <div class="house_title">Домик 3</div>
-                <div class="house_desc">4 чел., 3300 р.</div>
-            </div>
+             <?php
+                $query="SELECT * FROM house";
+                $link = mysqli_connect($host, $user, $password, $db_name); 
+                $result = mysqli_query($link, $query);
+                if($result == false) {
+                    die("Произошла ошибка при выполнении запроса "); 
+                }
+
+                else {
+                    for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+                    if(empty($data))
+                    {
+                        echo"Новых развлечений нет!";
+                    }
+                    else{
+                        foreach ($data as $row) {
+                            echo'
+                                <div class="house wow animate__animated animate__fadeInLeft">
+                                    <div class="house_img_container">
+                                        <img src="'.$row["pic_house"].'" alt="Домик">
+                                    </div>
+                                    <div class="house_title">'.$row["name_house"].'</div>
+                                    <div class="house_desc">'.$row["people_house"].' чел., '.$row["price_house"].' р.</div>
+                                </div>
+                            ';
+                        }
+                    }
+                }
+
+            ?>
         </div>
         <div style="float: right; margin-top: 15px">
             <a href="" class="page_link">Бронировать</a>
@@ -157,33 +193,38 @@
     <div class="container margin_top">
         <div class="goals_title">Наши Цели</div>
         <div class="goals">
-            <div class="goal wow animate__animated animate__backInUp">
-                <div class="goal_img_container">
-                    <img src="assets/images/hes.jpg" alt="Фото проекта">
-                </div>
-                <div class="goal_text">
-                    <div class="goal_header">Восстановить ГЭС</div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
-                </div>
-            </div>
-            <div class="goal wow animate__animated animate__backInUp">
-                <div class="goal_img_container">
-                    <img src="assets/images/hes.jpg" alt="Фото проекта">
-                </div>
-                <div class="goal_text">
-                    <div class="goal_header">Восстановить ГЭС</div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
-                </div>
-            </div>
-            <div class="goal wow animate__animated animate__backInUp">
-                <div class="goal_img_container">
-                    <img src="assets/images/hes.jpg" alt="Фото проекта">
-                </div>
-                <div class="goal_text">
-                    <div class="goal_header">Восстановить ГЭС</div>
-                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
-                </div>
-            </div>
+                <?php
+                    $query="SELECT * FROM project";
+                    $link = mysqli_connect($host, $user, $password, $db_name); 
+                    $result = mysqli_query($link, $query);
+                    if($result == false) {
+                        die("Произошла ошибка при выполнении запроса "); 
+                    }
+
+                    else {
+                        for ($data = []; $row = mysqli_fetch_assoc($result); $data[] = $row);
+                        if(empty($data))
+                        {
+                            echo"Новых развлечений нет!";
+                        }
+                        else{
+                            foreach ($data as $row) {
+                                echo'
+                                    <div class="goal wow animate__animated animate__backInUp">
+                                        <div class="goal_img_container">
+                                            <img src="'.$row["pic_project"].'" alt="Фото проекта">
+                                        </div>
+                                        <div class="goal_text">
+                                            <div class="goal_header">'.$row["name_project"].'</div>
+                                            <div class="text">'.$row["desc_project"].'</div>
+                                        </div>
+                                    </div>
+                                ';
+                            }
+                        }
+                    }
+
+                ?>
         </div>
         <div class="investors">Инвестируя в возрожденную деревню Мувыр, вы не только получите выгоду и прибыль, но и внесете значимый вклад в развитие этого прекрасного места. Мы гарантируем прозрачность, надежность и сотрудничество на взаимовыгодных условиях. </div>
     </div>
