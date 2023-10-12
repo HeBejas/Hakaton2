@@ -1,13 +1,13 @@
 <?php
 
 	include("connect.php");
-    if(empty($_POST['house']) || empty($_POST['name']) || empty($_POST['phone']))
+    if(empty($_POST['name']) || empty($_POST['phone']))
     {
         echo 'Заполнены не все значения';
         die();
     }
 
-    $query = "INSERT INTO orders_house (id_house, name_orders, phone_orders) VALUES ('$_POST[house]', '$_POST[name]', '$_POST[phone]')";
+    $query = "INSERT INTO orders_marry (name_orders, phone_orders) VALUES ('$_POST[name]', '$_POST[phone]')";
     $link = mysqli_connect($host, $user, $password, $db_name); 
     $result = mysqli_query($link, $query);
     if($result == false) {
