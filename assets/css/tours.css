@@ -1,52 +1,37 @@
-.mt {
-    margin-top: 80px;
-}
-.tour_position img{
-	width: 400px;
-}
-.tour_catalog{
-	display: flex;
-    /* flex-direction: column; */
+.tours_catalog {
+    display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
-.tour_name{
-	text-align: inherit;
-	font-weight: 700;
-	font-size: 24px;
-	margin-left: 20px;
-	margin-top: 5px;
+.t_tour {
+    width: 47%;
+    margin-bottom: 80px;
 }
-.tour_desc{
-	margin-left: 20px;
-    margin-bottom: 10px;
-	
+.t_tour_img_container {
+    width: 100%;
+    height: 400px;
 }
-.tour_position img{
-	border-radius: 20px;
+.t_tour_img_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
 }
-.tour_position{
-	position: relative;
-	/* padding: 30px; */
-	margin: 10px;
-	/* border-radius: 30px; */
-    width: 400px;
-    height: 300px;
+.t_title {
+    font-size: 22px;
+    font-weight: 700;
 }
-.tour_position_desc{
-	width: 400px;
-	background-color: #0a0a0ac4;
-	bottom: 4px;
-    position: absolute;
-	min-height: 65px;
-	color: rgb(255, 255, 255);
-	border-radius: 0px 0px 20px 20px;
+.t_price_number {
+    font-weight: 500;
 }
-
-.page_content{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column; 	
+.header {
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+@media (max-width: 650px) {
+    .t_tour {
+        width: 100%;
+    } 
 }
