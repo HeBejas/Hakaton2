@@ -18,7 +18,7 @@
             <div class="information_block">В деревне Мувыр можно наслаждаться природой, прогуляться по лесу до висячего моста, прокатиться на лодке, рыбачить, организовать барбекю, устроить пикник в беседке или под открытым небом и многое другое</div>
             <div class="prokat_catalog">
                 <?php
-                    include("connect.php");
+                    include("include/connect.php");
                     $query="SELECT * FROM drive";
                     $link = mysqli_connect($host, $user, $password, $db_name); 
                     $result = mysqli_query($link, $query);
@@ -73,7 +73,7 @@
                             }
                         }
                     }
-
+                    $link->close();
                 ?>
             </div>
         </div>

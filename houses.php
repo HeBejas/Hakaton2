@@ -19,7 +19,7 @@
         <div class="header">Гостевые домики</div>
         <div class="houses_catalog">
             <?php
-                include("connect.php");
+                include("include/connect.php");
                 $query="SELECT * FROM house";
                 $link = mysqli_connect($host, $user, $password, $db_name); 
                 $result = mysqli_query($link, $query);
@@ -68,7 +68,7 @@
                         }
                     }
                 }
-
+                $link->close();
             ?>
         </div>
         <div class="modal_bachdrop" id="modal_backdrop">
@@ -119,7 +119,7 @@
                                 <input type="text" id="tel" maxlenght="255">
                             </div>
                         </form>
-                        <div class="h_btn1" id="h_buy" houseid="">Оставить заявку</div>
+                        <div class="h_btn1" id="h_buy">Оставить заявку</div>
                     </div>
                 </div>
             </div>
@@ -153,7 +153,6 @@
             var img1 = $(this).parent().find("img").attr("src");
             var img2 = $(this).parent().find("img").attr("second_image");
             h_id = $(this).parent().find(".h_btn").attr("id");
-            console.log(img1, img2, h_id);
             $("#title").html(title);
             $("#price_number").html(pn);
             $("#desc").html(desc);

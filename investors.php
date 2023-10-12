@@ -15,7 +15,7 @@
         <div class="goals_title">Наши Цели</div>
         <div class="goals">
                 <?php
-                    include("connect.php");
+                    include("include/connect.php");
                     $query="SELECT * FROM project";
                     $link = mysqli_connect($host, $user, $password, $db_name); 
                     $result = mysqli_query($link, $query);
@@ -45,7 +45,7 @@
                             }
                         }
                     }
-
+                    $link->close();
                 ?>
     </div>
         <div class="investors">Инвестируя в возрожденную деревню Мувыр, вы не только получите выгоду и прибыль, но и внесете значимый вклад в развитие этого прекрасного места. Мы гарантируем прозрачность, надежность и сотрудничество на взаимовыгодных условиях. </div>

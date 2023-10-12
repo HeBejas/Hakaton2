@@ -11,7 +11,7 @@
 <head>
 	<title>Личный кабинет</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="adminpanel.css">
+	<link rel="stylesheet" type="text/css" href=",uvyr_admin/adminpanel.css">
 	<script type="text/javascript" src="jquery.js"></script>
 	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
 	<script type="text/javascript" src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>

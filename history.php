@@ -138,7 +138,7 @@
             </div>
             
             <div class="about_content_img_side wow animate__animated animate__fadeInUp" style="margin-bottom: 20px;">
-                <div class="about_image_side_box" style="width: 700px;">
+                <div class="about_image_side_box ILoveMuvyr">
                     <img class="about_image_side" src="assets/images/about6.jpg">
                 </div>
             </div>

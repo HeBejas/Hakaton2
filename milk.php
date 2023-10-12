@@ -24,7 +24,7 @@
 
             <div class="milk_prod_cat" style="margin-top: 25px;">
                 <?php
-                    include("connect.php");
+                    include("include/connect.php");
                     $query="SELECT * FROM milk";
                     $link = mysqli_connect($host, $user, $password, $db_name); 
                     $result = mysqli_query($link, $query);
@@ -76,7 +76,7 @@
                             }
                         }
                     }
-
+                    $link->close();
                 ?>
 
             <div class="milk_gallery" style="margin-top: 50px;">
