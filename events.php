@@ -19,7 +19,7 @@
         <div class="header">Мероприятия</div>
         <div class="events_catalog">
            <?php
-                include("connect.php");
+                include("include/connect.php");
                 $query="SELECT * FROM event";
                 $link = mysqli_connect($host, $user, $password, $db_name); 
                 $result = mysqli_query($link, $query);
@@ -45,26 +45,18 @@
                                     <div class="e_desc">
                                         '.$row["desc_event"].'
                                     </div>
-                                    <div class="e_btn" id="1">Бронировать</div>
                                 </div>                            ';
                         }
                     }
                 }
-
+                $link->close();
             ?>
         </div>
     </div>
     <div class="container">
         <div class="page_content">
             <h2>Проведение свадеб</h2>
-            <div class="information_block">Где играть свадьбу? Еще сомневайтесь? Еще не определились? 
-            Конечно в Мувыре!!!
-            Там, где просто и красиво:
-            Выездная регистрация
-            Фуршет
-            Банкет
-            Домик невесты</div>
-
+            <div class="information_block">Деревня Мувыре - прекрасное место для организации свадебных торжеств в живописной деревенской атмосфере. Расположенная в окружении природы, эта уникальная локация предлагает прекрасные возможности для создания незабываемой свадебной церемонии и веселого приема</div>
             <div class="marry_slider_box wow animate__animated animate__fadeInUp">
                 <div class="marry_slider_track_box">
                     <div class="marry_slider_1">
@@ -157,7 +149,27 @@
             </div>
             <div class="information_block">
                 <p>Организация свадьбы в Мувыре, выездные регистрации в деревне:</p>
-                <p>Вы можете договорится по телефону <span class="tel">+7 (901) 865 87-55</span></p>
+                <p>Вы можете договорится по телефону <span class="tel">+7 (901) 865 87-55</span> или оставить заявку</p>
+                <div class="e_btn">Оставить заявку</div>
+            </div>
+        </div>
+    </div>
+    <div class="modal_bachdrop" id="modal_backdrop">
+        <div class="modal">
+            <div class="modal_close">✖</div>
+            <div class="e_modal_text">
+                <div class="e_title" id="title">Оставить заявку на проведение свадьбы</div>
+                <form>
+                    <div class="input_wrapper">
+                        <label for="name">ФИО</label>
+                        <input type="text" id="name" maxlenght="255">
+                    </div>
+                    <div class="input_wrapper">
+                        <label for="tel">Телефон</label>
+                        <input type="text" id="tel" maxlenght="255">
+                    </div>
+                </form>
+                <div class="e_btn" id="e_buy">Оставить заявку</div>
             </div>
         </div>
     </div>
@@ -192,6 +204,26 @@
                 }
                 },
             ],
+        });
+        $(".e_btn").click(function() {
+            $("#modal_backdrop").css({
+                opacity: 1,
+                "z-index": 1000,
+            });
+        });
+        $("#modal_backdrop").click(function(event) {
+            if(event.target.id == "modal_backdrop") {
+                $(this).css({
+                    opacity: 0,
+                    "z-index": -1,
+                });
+            }
+        })
+        $(".modal_close").click(() => {
+            $("#modal_backdrop").css({
+                opacity: 0,
+                "z-index": -1,
+            });
         });
     </script>
     <script src="assets/js/wow.min.js"></script>
