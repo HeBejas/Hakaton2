@@ -211,6 +211,9 @@
                 "z-index": 1000,
             });
         });
+        $("#e_buy").click(function(){
+            $(".e_modal_text").load("wedding_buy.php", {name: $("#name").val(), phone: $("#tel").val()})
+        });
         $("#modal_backdrop").click(function(event) {
             if(event.target.id == "modal_backdrop") {
                 $(this).css({
