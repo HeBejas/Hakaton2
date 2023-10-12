@@ -119,7 +119,7 @@
                                 <input type="text" id="tel" maxlenght="255">
                             </div>
                         </form>
-                        <div class="h_btn" id="1">Оплатить</div>
+                        <div class="h_btn1" id="h_buy" houseid="">Оставить заявку</div>
                     </div>
                 </div>
             </div>
@@ -127,6 +127,7 @@
     </div>
     <?include 'include/footer.php'?>
     <script>
+        h_id = 0;
         $("#houses").addClass("active_header_btn")
         $(".house_slider_1").slick({
             swipe: false,
@@ -151,7 +152,8 @@
             var desc = $(this).parent().find(".h_desc").html();
             var img1 = $(this).parent().find("img").attr("src");
             var img2 = $(this).parent().find("img").attr("second_image");
-            console.log(img1, img2)
+            h_id = $(this).parent().find(".h_btn").attr("id");
+            console.log(img1, img2, h_id);
             $("#title").html(title);
             $("#price_number").html(pn);
             $("#desc").html(desc);
@@ -161,6 +163,9 @@
                 opacity: 1,
                 "z-index": 1000,
             });
+        });
+        $("#h_buy").click(function(){
+            $(".flex_space_between").load("house_buy.php", {house: h_id, name: $("#name").val(), phone: $("#tel").val()})
         });
         $("#modal_backdrop").click(function(event) {
             if(event.target.id == "modal_backdrop") {
