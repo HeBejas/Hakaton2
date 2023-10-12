@@ -1,4 +1,4 @@
-<header>
+<header id="desktop">
     <div class="container">
         <nav>
             <div>
@@ -29,7 +29,27 @@
         </nav>
     </div>
 </header>
+<header id="mobile">
+    <div class="container mobile_box">
+        <div class="icons">
+            <a href="https://instagram.com/muvyr.village?utm_medium=copy_link"><img src="assets/images/inst.svg" alt="Инстаграм"></a>
+            <a href="https://vk.com/weekendvmywer"><img src="assets/images/vk.svg" alt="ВК"></a>
+            <a href="https://t.me/discoverUdmurtia"><img src="assets/images/telegram.svg" alt="Телеграм"></a>
+        </div>
+        <div class="header_logo">
+            <a href="/mvr"><img src="assets/images/logo.png" alt="Логотип"></a>
+        </div>
+        <div class="burger">
+            <svg width="40" height="30" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="15.1852" width="30" height="4.81481" rx="2.40741" fill="white"/>
+            <rect y="7.77783" width="30" height="4.81481" rx="2.40741" fill="white"/>
+            <rect width="30" height="4.81481" rx="2.40741" fill="white"/>
+            </svg>
+        </div>
+    </div>
+</header>
 <script>
+    var prevScrollpos = $(window).scrollTop();
     let i = false;
     $(".drop_btn").click(function() {
         if(i) {
@@ -51,5 +71,14 @@
             i = true;
         }
         
+    });
+    $(window).scroll(function() {
+        var currentScrollPos = $(window).scrollTop();
+        if (prevScrollpos > currentScrollPos) {
+            $("#mobile").css("top", "0px");
+        } else {
+            $("#mobile").css("top", "-200px");
+        }
+        prevScrollpos = currentScrollPos;
     });
 </script>

@@ -15,7 +15,7 @@
 </head>
 <body>
     <?include 'include/header.php'?>
-    <div class="container">
+    <div class="container mt">
         <div class="page_content">
             <h2>Мероприятия</h2>
             <div class="information_block">В Мувыре вас ждёт множество увлекательных мероприятий, расчитанных на то, чтобы оставить у вас самые яркие и теплиые воспоминания о нашей деревне</div>
