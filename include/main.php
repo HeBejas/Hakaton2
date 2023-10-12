@@ -173,7 +173,7 @@
             ?>
         </div>
         <div style="float: right; margin-top: 15px">
-            <a href="" class="page_link">Бронировать</a>
+            <a href="houses.php" class="page_link">Бронировать</a>
         </div>
     </div>
     <div class="container margin_top">
@@ -182,7 +182,7 @@
                 <div class="header">Молочная Продукция</div>
                 <div class="text">Молочная продукция, производящаяся в деревне Мувыр представляет широкий ассортимент свежих и натуральных молочных продуктов, созданных с любовью и заботой в нашей деревне. Мы гордимся высоким качеством нашей продукции, которая производится из свежего молока, полученного от местных коров. Наша команда экспертов следит за каждым этапом производства, чтобы обеспечить вам самые вкусные и полезные молочные продукты. От свежего молока до йогуртов, сыров и масла - мы предлагаем вам насладиться натуральными и питательными продуктами от нашей деревни Мувыр.</div>
                 <div style="float: left; margin-top: 30px">
-                    <a href="" class="page_link">Молочая продукция</a>
+                    <a href="milk.php" class="page_link">Молочая продукция</a>
                 </div>
             </div>
             <div class="milk_img_container wow animate__animated animate__zoomIn">
@@ -228,6 +228,20 @@
         </div>
         <div class="investors">Инвестируя в возрожденную деревню Мувыр, вы не только получите выгоду и прибыль, но и внесете значимый вклад в развитие этого прекрасного места. Мы гарантируем прозрачность, надежность и сотрудничество на взаимовыгодных условиях. </div>
     </div>
+    <div class="container" style="margin-block: 30px;">
+        <div class="flex_space_between">
+            <div class="his_img_box">
+                <img src="assets/images/his.png" alt="История">
+            </div>
+            <div class="his_text wow animate__animated animate__fadeIn">
+                <div class="header">История Мувыра</div>
+                <div class="text">В начале 1980-х родную деревню Корепанова, основанную в 1837-м, стёрли с лица земли. Дома снесли бульдозером, людей перебросили в соседние сёла. «Неперспективный» Мувыр перестал существовать в документах и на картах. А Александр никак не мог понять: зачем и кому это нужно? Он сидел на берегу реки, смотрел на поле, где ещё недавно кипела жизнь, и у него, молодого сильного мужчины, отслужившего срочную на границе с Китаем, опускались руки. Именно тогда он пообещал себе возродить малую родину.</div>
+                <div style="margin-top: 20px">
+                    <a href="history.php" class="page_link">Читать дальше</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container">
         <div class="flex_space_between">
             <div class="wow animate__animated animate__fadeIn">
@@ -241,7 +255,7 @@
                     https://vk.com/weekendvmywer
                 </div>
                 <div style="margin-block: 20px">
-                    <a href="" class="page_link">Карта Мувыра</a>
+                    <a href="contacts.php" class="page_link">Карта Мувыра</a>
                 </div>
             </div>
         </div>

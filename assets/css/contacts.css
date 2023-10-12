@@ -18,9 +18,15 @@
 	align-items: center;
 	flex-direction: column; 	
 }
-.information_block{
-	width: 1000px;
-}
 .information_block span {
     font-weight: 600;
+}
+.map {
+	width: 100%;
+	overflow: hidden;
+}
+@media (max-width: 650px) {
+    #rec590986084 .tn-elem[data-elem-id="1684089518676"] .tn-atom{
+		height: 400px !important;
+	}
 }

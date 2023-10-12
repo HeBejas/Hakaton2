@@ -10,10 +10,10 @@
                         <a href="houses.php" class="hover" id="houses">Гостевые домики</a>
                         <a href="funs.php" class="hover" id="funs">Развлечения</a>
                         <a href="milk.php" class="hover" id="milk">Молочная продукция</a>
-                        <a href="history.php" class="hover" id="history">История</a>
+                        <a href="investors.php" class="hover" id="investors">Инвесторам</a>
                     </div>
                 </div>
-                <a href="investors.php" class="hover" id="investors">Инвесторам</a>
+                <a href="history.php" class="hover" id="history">История</a>
             </div>
             <div class="header_logo">
                 <a href="/mvr"><img src="assets/images/logo.png" alt="Логотип"></a>
@@ -30,7 +30,7 @@
     </div>
 </header>
 <header id="mobile">
-    <div class="mobile_box">
+    <div class="container mobile_box">
         <div class="icons">
             <a href="https://instagram.com/muvyr.village?utm_medium=copy_link"><img src="assets/images/inst.svg" alt="Инстаграм"></a>
             <a href="https://vk.com/weekendvmywer"><img src="assets/images/vk.svg" alt="ВК"></a>
@@ -39,12 +39,18 @@
         <div class="header_logo">
             <a href="/mvr"><img src="assets/images/logo.png" alt="Логотип"></a>
         </div>
-        <div class="burger">
-            <svg width="40" height="30" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect y="15.1852" width="30" height="4.81481" rx="2.40741" fill="white"/>
-            <rect y="7.77783" width="30" height="4.81481" rx="2.40741" fill="white"/>
-            <rect width="30" height="4.81481" rx="2.40741" fill="white"/>
-            </svg>
+        <div style="position: relative;">
+            <div class="header_burger">
+                <img src="assets/images/burger.svg" alt="Бургер">
+            </div>
+            <div class="header_burger_menu">
+                <a href="tours.php" class="hover" id="tours">Экскурсии</a>
+                <a href="events.php" class="hover" id="events">Мероприятия</a>
+                <a href="houses.php" class="hover" id="houses">Гостевые домики</a>
+                <a href="funs.php" class="hover" id="funs">Развлечения</a>
+                <a href="milk.php" class="hover" id="milk">Молочная продукция</a>
+                <a href="history.php" class="hover" id="history">История</a>
+            </div>
         </div>
     </div>
 </header>
@@ -77,8 +83,28 @@
         if (prevScrollpos > currentScrollPos) {
             $("#mobile").css("top", "0px");
         } else {
-            $("#mobile").css("top", "-200px");
+            $("#mobile").css("top", "-1000px");
         }
         prevScrollpos = currentScrollPos;
     });
+    let clicked = false;
+    $(".header_burger").click(function() {
+        if(clicked) {
+            $(this).find("img").attr("src", "assets/images/burger.svg");
+            $(".header_burger_menu").css({
+                "max-height": "0px",
+                "padding-top": "0px",
+            });
+            clicked = false;
+        }
+        else {
+            $(this).find("img").attr("src", "assets/images/close.svg");
+            $(".header_burger_menu").css({
+                "max-height": "600px",
+                "padding-top": "40px",
+            });
+            clicked = true;
+        }
+    });
+</script>
 </script>

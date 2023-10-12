@@ -6,7 +6,6 @@
 	display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 900px;
 }
 .milk_gallery img{
 	width: 400px;
@@ -21,7 +20,6 @@
 
 }
 .milk_prod_cat{
-    width: 1000px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -53,37 +51,15 @@
 	flex-direction: column; 	
 }
 @media (max-width: 1200px) {
-	.container {
-		width: 970px;
-	}
 }
 @media (max-width: 950px) {
-	.container {
-		width: 640px !important;
-	}
-	.milk_prod_cat{
-		width: 800px !important;
-	}
 	.milk_gallery img{
 		width: 250px !important;
-	}
-	.milk_gallery{
-		width: 611px !important;
 	}
 }
 
 @media (max-width: 650px) {
-	.container {
-		width: 575px !important;
-	}
 	.milk_main_img {
-		width: 300px !important;
-	}
-	.milk_prod_cat{
-		width: 400px !important;
-		transform: scale(1);
-	}
-	.milk_gallery{
 		width: 300px !important;
 	}
 	.milk_prod_pos img{
@@ -104,7 +80,4 @@
 	
 }
 @media (max-width: 550px) {
-	.container{
-		width: 100% !important;
-	}
 }
