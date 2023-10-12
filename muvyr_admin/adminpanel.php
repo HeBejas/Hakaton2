@@ -25,7 +25,7 @@
 				?>
 			</section>
 			<div id="burger">
-				свернуть/развернуть
+				Меню
 			</div>
 		</div>
 		<section id="admincontent">
@@ -34,7 +34,7 @@
 	</main>
 </body>
 <script>
-	check = true;
+	check = false;
 	$("#burger").click(function(){
 		if(check)
 		{
