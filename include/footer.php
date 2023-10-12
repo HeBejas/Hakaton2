@@ -17,7 +17,7 @@
         </div>
         <div class="footer_container">
             <div class="footer_logo">
-                <img src="assets/images/logo.png" alt="Логотип" style="width: 120px; height: 120px; margin: 10px auto;">
+                <img src="assets/images/logo.png" alt="Логотип">
                 <div class="icons">
                     <a href="https://instagram.com/muvyr.village?utm_medium=copy_link"><img src="assets/images/inst.svg" alt="Инстаграм"></a>
                     <a href="https://vk.com/weekendvmywer"><img src="assets/images/vk.svg" alt="ВК"></a>

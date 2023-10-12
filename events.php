@@ -176,6 +176,20 @@
             asNavFor: '.marry_slider_1',
             centerMode: true,
             focusOnSelect: true,
+            responsive: [
+                {
+                breakpoint: 650,
+                settings: {
+                    slidesToShow: 3,
+                }
+                },
+                {
+                breakpoint: 550,
+                settings: {
+                    slidesToShow: 2,
+                }
+                },
+            ],
         });
     </script>
     <script src="assets/js/wow.min.js"></script>

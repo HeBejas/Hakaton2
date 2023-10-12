@@ -151,6 +151,10 @@ h2 {
     .events_catalog{
         width: 100% !important;
     }
+    .marry_img_box2 {
+        width: 150px;
+        height: 150px;
+    }
 }
 @media (max-width: 950px) {
     .event_position {
@@ -158,5 +162,14 @@ h2 {
     }
     .event_position_desc {
         width: 100%;
+    }
+    .marry_img_box2 {
+        width: 100px;
+        height: 100px;
+    }
+}
+@media (max-width: 650px) {
+    .marry_img_box1 {
+        height: 350px;  
     }
 }
