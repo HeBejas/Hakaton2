@@ -12,49 +12,37 @@
 <body>
     <?include 'include/header.php'?>
     <div class="container mt">
-        <div class="page_content">
-            <h2>Наши Цели</h2>
-            <div class="information_block">Инвестируя в возрожденную деревню Мувыр, вы не только получите выгоду и прибыль, но и внесете значимый вклад в развитие этого прекрасного места. Мы гарантируем прозрачность, надежность и сотрудничество на взаимовыгодных условиях.</div>
-            
-            <div class="purpose_catalog">
-                <div class="purpose_position">
-                    <img src="invest1.jpg">
-                    <div class="purpose_info">
-                        <div class="purpose_name">Восстановить ГЭС</div>
-                        <div class="purpose_desc">Надо собрать денег и восстановить старую ГЭС. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm.</div>
-                    </div>
-                    <div class="purpose_purpose">
-                        <!-- <div class="purpose_purpose_text">На данный момент собрано <div class="purpose_purpose_have">2000 руб</div> из <div class="purpose_purpose_need">130000 руб</div></div> -->
-                        <div class="purpose_phone"> +79875654345</div>
-                        <div class="purpose_button"><button>Оставить Заявку</button></div>
-                    </div>
+        <div class="goals_title">Наши Цели</div>
+        <div class="goals">
+            <div class="goal wow animate__animated animate__backInUp">
+                <div class="goal_img_container">
+                    <img src="assets/images/hes.jpg" alt="Фото проекта">
                 </div>
-                <div class="purpose_position">
-                    <img src="invest1.jpg">
-                    <div class="purpose_info">
-                        <div class="purpose_name">Восстановить ГЭС</div>
-                        <div class="purpose_desc">Надо собрать денег и восстановить старую ГЭС. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm.</div>
-                    </div>
-                    <div class="purpose_purpose">
-                        <!-- <div class="purpose_purpose_text">На данный момент собрано <div class="purpose_purpose_have">2000 руб</div> из <div class="purpose_purpose_need">130000 руб</div></div> -->
-                        <div class="purpose_phone"> +79875654345</div>
-                        <div class="purpose_button"><button>Оставить Заявку</button></div>
-                    </div>
+                <div class="goal_text">
+                    <div class="goal_header">Восстановить ГЭС</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
                 </div>
-                <div class="purpose_position">
-                    <img src="invest1.jpg">
-                    <div class="purpose_info">
-                        <div class="purpose_name">Восстановить ГЭС</div>
-                        <div class="purpose_desc">Надо собрать денег и восстановить старую ГЭС. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm. Благодоря этой ГЭС заживеееееееееm.</div>
-                    </div>
-                    <div class="purpose_purpose">
-                        <!-- <div class="purpose_purpose_text">На данный момент собрано <div class="purpose_purpose_have">2000 руб</div> из <div class="purpose_purpose_need">130000 руб</div></div> -->
-                        <div class="purpose_phone"> +79875654345</div>
-                        <div class="purpose_button"><button>Оставить Заявку</button></div>
-                    </div>
+            </div>
+            <div class="goal wow animate__animated animate__backInUp">
+                <div class="goal_img_container">
+                    <img src="assets/images/hes.jpg" alt="Фото проекта">
+                </div>
+                <div class="goal_text">
+                    <div class="goal_header">Восстановить ГЭС</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
+                </div>
+            </div>
+            <div class="goal wow animate__animated animate__backInUp">
+                <div class="goal_img_container">
+                    <img src="assets/images/hes.jpg" alt="Фото проекта">
+                </div>
+                <div class="goal_text">
+                    <div class="goal_header">Восстановить ГЭС</div>
+                    <div class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus minus libero repellendus minima dignissimos! Distinctio fugit laborum maiores perspiciatis temporibus</div>
                 </div>
             </div>
         </div>
+        <div class="investors">Инвестируя в возрожденную деревню Мувыр, вы не только получите выгоду и прибыль, но и внесете значимый вклад в развитие этого прекрасного места. Мы гарантируем прозрачность, надежность и сотрудничество на взаимовыгодных условиях. </div>
     </div>
     <?include 'include/footer.php'?>
     <script>
