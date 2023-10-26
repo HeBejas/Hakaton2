@@ -12,8 +12,13 @@
         <div class="default_button modal_close">Закрыть</div>';
         die();
     }
-
-    $query = "UPDATE house SET name_house = '$_POST[name]', people_house = '$_POST[people]' , desc_house = '$_POST[desc]', price_house = '$_POST[price]', pic_house = '$_POST[pic]', pic2_house = '$_POST[pic2]' WHERE id_house = '$_POST[id]' ";
+    $name = htmlspecialchars($_POST["name"]);
+    $people = htmlspecialchars($_POST["people"]);
+    $desc = htmlspecialchars($_POST["desc"]);
+    $price = htmlspecialchars($_POST["price"]);
+    $pic = htmlspecialchars($_POST["pic"]);
+    $pic2 = htmlspecialchars($_POST["pic2"]);
+    $query = "UPDATE house SET name_house = '$name', people_house = '$people' , desc_house = '$desc', price_house = '$price', pic_house = '$pic', pic2_house = '$pic2' WHERE id_house = '$_POST[id]' ";
     $link = mysqli_connect($host, $user, $password, $db_name); 
     $result = mysqli_query($link, $query);
     if($result == false) {
@@ -26,4 +31,5 @@
             <div class="default_button modal_close">Закрыть</div>
         ';
     }
+    $link->close();
 ?>

@@ -12,8 +12,11 @@
         <div class="default_button modal_close">Закрыть</div>';
         die();
     }
-
-    $query = "UPDATE drive SET name_drive = '$_POST[name]', desc_drive = '$_POST[desc]', price_drive = '$_POST[price]', pic_drive = '$_POST[pic]' WHERE id_drive = '$_POST[id]' ";
+    $name = htmlspecialchars($_POST["name"]);
+    $desc = htmlspecialchars($_POST["desc"]);
+    $price = htmlspecialchars($_POST["price"]);
+    $pic = htmlspecialchars($_POST["pic"]);
+    $query = "UPDATE drive SET name_drive = '$name', desc_drive = '$desc', price_drive = '$price', pic_drive = '$pic' WHERE id_drive = '$_POST[id]' ";
     $link = mysqli_connect($host, $user, $password, $db_name); 
     $result = mysqli_query($link, $query);
     if($result == false) {
@@ -26,4 +29,5 @@
             <div class="default_button modal_close">Закрыть</div>
         ';
     }
+    $link->close();
 ?>

@@ -12,8 +12,11 @@
         <div class="default_button modal_close">Закрыть</div>';
         die();
     }
-
-    $query = "INSERT INTO event(name_event, desc_event, time_event, pic_event) VALUES ('$_POST[name]', '$_POST[desc]', '$_POST[time]', '$_POST[pic]')";
+    $name = htmlspecialchars($_POST["name"]);
+    $desc = htmlspecialchars($_POST["desc"]);
+    $time = htmlspecialchars($_POST["time"]);
+    $pic = htmlspecialchars($_POST["pic"]);
+    $query = "INSERT INTO event(name_event, desc_event, time_event, pic_event) VALUES ('$name', '$desc', '$time', '$pic')";
     $link = mysqli_connect($host, $user, $password, $db_name); 
     $result = mysqli_query($link, $query);
     if($result == false) {
@@ -26,4 +29,5 @@
             <div class="default_button modal_close">Закрыть</div>
         ';
     }
+    $link->close();
 ?>

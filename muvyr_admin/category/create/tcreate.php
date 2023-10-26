@@ -12,8 +12,11 @@
         <div class="default_button modal_close">Закрыть</div>';
         die();
     }
-
-    $query = "INSERT INTO tours(name_tour, desc_tour, price_tour, pic_tour) VALUES ('$_POST[name]','$_POST[desc]', '$_POST[price]', '$_POST[pic]')";
+    $name = htmlspecialchars($_POST["name"]);
+    $desc = htmlspecialchars($_POST["desc"]);
+    $price = htmlspecialchars($_POST["price"]);
+    $pic = htmlspecialchars($_POST["pic"]);
+    $query = "INSERT INTO tours(name_tour, desc_tour, price_tour, pic_tour) VALUES ('$name','$desc', '$price', '$pic')";
     $link = mysqli_connect($host, $user, $password, $db_name); 
     $result = mysqli_query($link, $query);
     if($result == false) {
@@ -26,4 +29,5 @@
             <div class="default_button modal_close">Закрыть</div>
         ';
     }
+    $link->close();
 ?>

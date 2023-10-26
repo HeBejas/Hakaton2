@@ -76,6 +76,7 @@
 			</table>';
 		}
 	}
+	$link->close();
 ?>
 <script>
 		tablea = new DataTable('#address_table', {

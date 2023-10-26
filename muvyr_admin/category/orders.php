@@ -54,7 +54,7 @@
 			</table>';
 		}
 	}
-
+    $link->close();
 
 ?>
 <script>

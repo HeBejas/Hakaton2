@@ -12,8 +12,8 @@
         <div class="default_button modal_close">Закрыть</div>';
         die();
     }
-
-    $query = "INSERT INTO address(name_address) VALUES ('$_POST[name]')";
+    $name = htmlspecialchars($_POST["name"]);
+    $query = "INSERT INTO address(name_address) VALUES ('$name')";
     $link = mysqli_connect($host, $user, $password, $db_name); 
     $result = mysqli_query($link, $query);
     if($result == false) {
@@ -26,4 +26,5 @@
             <div class="default_button modal_close">Закрыть</div>
         ';
     }
+    $link->close();
 ?>

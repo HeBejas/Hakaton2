@@ -94,6 +94,7 @@
 			</table>';
 		}
 	}
+	$link->close();
 ?>
 
 <script>

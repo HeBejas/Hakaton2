@@ -14,8 +14,8 @@
 	<div class="sidebar_option" id="opt4">
 		Домики
 	</div>
-	<div class="sidebar_option" id="opt5">
-		Прокат
+	<div class="sidebar_option" id="opt5f">
+		Развлечения
 	</div>
 	<div class="sidebar_option" id="opt6">
 		Молочная продукция
@@ -48,7 +48,7 @@
 	$("#opt4").click(function(){
 		$("#admincontent").load("category/house.php");
 	});
-	$("#opt5").click(function(){
+	$("#opt5f").click(function(){
 		$("#admincontent").load("category/drive.php");
 	});
 	$("#opt6").click(function(){

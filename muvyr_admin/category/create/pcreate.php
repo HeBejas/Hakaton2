@@ -12,8 +12,11 @@
         <div class="default_button modal_close">Закрыть</div>';
         die();
     }
-
-    $query = "INSERT INTO project(name_project, desc_project, status_project, pic_project) VALUES ('$_POST[name]', '$_POST[desc]', '$_POST[status]', '$_POST[pic]')";
+    $name = htmlspecialchars($_POST["name"]);
+    $desc = htmlspecialchars($_POST["desc"]);
+    $status = htmlspecialchars($_POST["status"]);
+    $pic = htmlspecialchars($_POST["pic"]);
+    $query = "INSERT INTO project(name_project, desc_project, status_project, pic_project) VALUES ('$name', '$desc', '$status', '$pic')";
     $link = mysqli_connect($host, $user, $password, $db_name); 
     $result = mysqli_query($link, $query);
     if($result == false) {
@@ -26,4 +29,5 @@
             <div class="default_button modal_close">Закрыть</div>
         ';
     }
+    $link->close();
 ?>

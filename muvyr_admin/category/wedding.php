@@ -52,7 +52,7 @@
 			</table>';
 		}
 	}
-
+    $link->close();
 
 ?>
 <script>

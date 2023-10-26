@@ -107,6 +107,7 @@
 			</table>';
 		}
 	}
+	$link->close();
 ?>
 
 <script>

@@ -3,8 +3,8 @@
 	// define("PASSWORD", "");
 	// define("DB_NAME", "muvyr");
 	// define("HOST_NAME", "localhost");
-	$user='root';
-	$password='';
-	$db_name='muvyr';
+	$user='muvyr_db';
+	$password='Abc123';
+	$db_name='muvyr_db';
 	$host='localhost';
 ?>

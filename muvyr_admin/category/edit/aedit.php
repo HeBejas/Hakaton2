@@ -38,6 +38,7 @@ else {
 			</div>';
 		}
 	}
+	$link->close();
 ?>
 <script>
 	$(".modal_close").click(function(){

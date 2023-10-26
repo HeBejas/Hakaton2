@@ -12,8 +12,11 @@
         <div class="default_button modal_close">Закрыть</div>';
         die();
     }
-
-    $query = "UPDATE event SET name_event = '$_POST[name]', desc_event = '$_POST[desc]', time_event = '$_POST[time]', pic_event = '$_POST[pic]' WHERE id_event = '$_POST[id]' ";
+    $name = htmlspecialchars($_POST["name"]);
+    $desc = htmlspecialchars($_POST["desc"]);
+    $time = htmlspecialchars($_POST["time"]);
+    $pic = htmlspecialchars($_POST["pic"]);
+    $query = "UPDATE event SET name_event = '$name', desc_event = '$desc', time_event = '$time', pic_event = '$pic' WHERE id_event = '$_POST[id]' ";
     $link = mysqli_connect($host, $user, $password, $db_name); 
     $result = mysqli_query($link, $query);
     if($result == false) {
@@ -26,4 +29,5 @@
             <div class="default_button modal_close">Закрыть</div>
         ';
     }
+    $link->close();
 ?>

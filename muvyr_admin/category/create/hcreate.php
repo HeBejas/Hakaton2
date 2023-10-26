@@ -12,8 +12,13 @@
         <div class="default_button modal_close">Закрыть</div>';
         die();
     }
-
-    $query = "INSERT INTO house(name_house, people_house, desc_house, price_house, pic_house, pic2_house) VALUES ('$_POST[name]', '$_POST[people]', '$_POST[desc]', '$_POST[price]', '$_POST[pic]', '$_POST[pic2]')";
+    $name = htmlspecialchars($_POST["name"]);
+    $people = htmlspecialchars($_POST["people"]);
+    $desc = htmlspecialchars($_POST["desc"]);
+    $price = htmlspecialchars($_POST["price"]);
+    $pic = htmlspecialchars($_POST["pic"]);
+    $pic2 = htmlspecialchars($_POST["pic2"]);
+    $query = "INSERT INTO house(name_house, people_house, desc_house, price_house, pic_house, pic2_house) VALUES ('$name', '$people', '$desc', '$price', '$pic', '$pic2')";
     $link = mysqli_connect($host, $user, $password, $db_name); 
     $result = mysqli_query($link, $query);
     if($result == false) {
@@ -26,4 +31,5 @@
             <div class="default_button modal_close">Закрыть</div>
         ';
     }
+    $link->close();
 ?>

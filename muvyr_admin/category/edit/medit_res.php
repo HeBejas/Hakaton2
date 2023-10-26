@@ -12,8 +12,10 @@
         <div class="default_button modal_close">Закрыть</div>';
         die();
     }
-
-    $query = "UPDATE milk SET name_milk = '$_POST[name]', desc_milk = '$_POST[desc]', pic_milk = '$_POST[pic]' WHERE id_milk = '$_POST[id]' ";
+    $name = htmlspecialchars($_POST["name"]);
+    $desc = htmlspecialchars($_POST["desc"]);
+    $pic = htmlspecialchars($_POST["pic"]);
+    $query = "UPDATE milk SET name_milk = '$name', desc_milk = '$desc', pic_milk = '$pic' WHERE id_milk = '$_POST[id]' ";
     $link = mysqli_connect($host, $user, $password, $db_name); 
     $result = mysqli_query($link, $query);
     if($result == false) {
@@ -26,4 +28,5 @@
             <div class="default_button modal_close">Закрыть</div>
         ';
     }
+    $link->close();
 ?>

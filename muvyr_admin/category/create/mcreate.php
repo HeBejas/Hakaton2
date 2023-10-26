@@ -12,9 +12,11 @@
         <div class="default_button modal_close">Закрыть</div>';
         die();
     }
-
-    $query = "INSERT INTO milk(name_milk, desc_milk, pic_milk) VALUES ('$_POST[name]', '$_POST[desc]', '$_POST[pic]')";
-    $link = mysqli_connect($host, $user, $password, $db_name); 
+    $name = htmlspecialchars($_POST["name"]);
+    $desc = htmlspecialchars($_POST["desc"]);
+    $pic = htmlspecialchars($_POST["pic"]);
+    $query = "INSERT INTO milk(name_milk, desc_milk, pic_milk) VALUES ('$name', '$desc', '$pic')";
+    $link = mysqli_connect($host, $user, $password, $db_name);
     $result = mysqli_query($link, $query);
     if($result == false) {
         die('Произошла ошибка при выполнении запроса 
@@ -26,4 +28,5 @@
             <div class="default_button modal_close">Закрыть</div>
         ';
     }
+    $link->close();
 ?>

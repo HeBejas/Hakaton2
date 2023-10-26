@@ -88,6 +88,7 @@
 			</table>';
 		}
 	}
+	$link->close();
 ?>
 <script>
 	tablem = new DataTable('#milk_table', {

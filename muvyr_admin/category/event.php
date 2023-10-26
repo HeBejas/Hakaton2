@@ -94,6 +94,7 @@
 			</table>';
 		}
 	}
+	$link->close();
 ?>
 <script>
 	tablee = new DataTable('#event_table', {
